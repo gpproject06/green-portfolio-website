@@ -1,7 +1,7 @@
 ## Getting Started
 
 First, run the development server:
-To do this open up the terminal using  `Ctrl + Shft + ` `
+To do this open up the terminal using  ``Ctrl + Shft + ` ``
 Top left Vscode Menu selct Terminal and then New Terminal
 
 Make sure you are in 'green-portfolio-website'
