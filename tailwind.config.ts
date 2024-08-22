@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        'light-green': '#74C69D',
+      },
+      animation: {
+        'float': 'float 2s infinite',
+      },
     },
   },
   plugins: [],
