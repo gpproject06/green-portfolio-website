@@ -4,6 +4,12 @@ import MissionCard from "./MissionCard";
 import EcmCard from "./EcmCard";
 import YouTubeEmbed from './YouTubeEmbed';
 import rightArrow from '/public/rightArrow.svg'
+import Logo from '/public/Logo.svg'
+import Youtube from '/public/Youtube.svg';
+import Instagram from '/public/Instagram.svg';
+import Linkedin from '/public/Linkedin.svg';
+import tiktok from '/public/tiktok.svg';
+
 
 export default function Home() {
   return (
@@ -150,15 +156,113 @@ export default function Home() {
    </div>
  </div>
      </section>
+     
 
      {/* Sign up section */}
-     <section>
-     sign up
-     </section>
+     <section className="py-20 text-center space-y-10">
 
-    {/* Footter section */}
-     <section>
- Footer
+    <p className="text-5xl font-bold ">
+      Sign up for <br className =" sm:hidden" />free today
+    </p>
+
+    <p className="text-lg sm:text-xl">
+    Empowering students with free courses and a vibrant community<br className= "hidden sm:block"></br> to thrive in business. Join us and build your future today!
+    </p>
+
+    <div className="flex justify-center gap-4"> 
+      {/* gradient background */}
+      <button className="bg-black text-white py-2 px-4 rounded-lg">Sign Up</button>
+      <button className=" text-lg flex items-center text-black gap-2">
+        Learn more
+        <Image className="w-7" src={rightArrow} alt="Right Arrow SVG" />
+      </button>
+
+      </div>
+
+    </section>
+
+
+    {/* Footer section */}
+     <section className = "bg-black gap-10 py-10 px-10 2xl:px-36 text-center flex flex-col sm:flex-row  text-white ">
+      <div className = "flex flex-col gap-7">
+      
+      
+        {/* Logo */}
+        <Image className="w-12 2xl:w-14 rounded-2xl shadow-md shadow-green-500" src={Logo} alt="Logo SVG" />
+    
+        <p className = "text-sky-200 text-start text-lg 2xl:text-2xl sm:text-base">
+        Empowering the Next Generation of <br className = "hidden md:block"/> Business Leaders
+        </p>
+
+        <div className = "flex flex-row gap-5 sm:pt-20">
+          {/* LINK 1 */}
+        <a href="https://www.youtube.com/watch?v=9VlvbpXwLJs&t=3616s" target="_blank" rel="noopener noreferrer">
+       <Image className="w-10 2xl:w-12" src={Youtube} alt="Youtube SVG" />
+       </a>
+
+        {/* LINK 2 */}
+       <a href="https://www.instagram.com/green_portfolio_project?igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer">
+      <Image className="w-8 2xl:w-10" src={Instagram} alt="Instagram SVG" />
+      </a>
+
+       {/* LINK 3 */}
+      <a href="https://www.linkedin.com/company/green-portfolio-project/" target="_blank" rel="noopener noreferrer">
+      <Image className="w-8 2xl:w-10" src={Linkedin} alt="LinkedIn SVG" />
+      </a>
+
+       {/* LINK 4 */}
+      <a href="https://www.tiktok.com/@greenportfolioproject1?_t=8pIWxByNnCQ&_r=1" target="_blank" rel="noopener noreferrer">
+      <Image className="w-8 2xl:w-10" src={tiktok} alt="TikTok SVG" />
+       </a>
+           </div>
+        </div>
+
+        
+<div className="pl-1 text-start sm:ml-auto">
+<ul className="flex flex-col sm:flex-row gap-5 lg:gap-20 2xl:gap-36 2xl:text-lg">
+    <li>
+      Product
+      <ul className="text-gray-500 pt-4 space-y-4">
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Features</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Integrations</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Updates</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">FAQ</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Pricing</a></li>
+      </ul>
+    </li>
+    
+    <li>
+      Company
+      <ul className="text-gray-500 pt-4 space-y-4">
+        <li><a href="#" target="_blank" rel="noopener noreferrer">About</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Blog</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Careers</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Manifesto</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Press</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Contact</a></li>
+      </ul>
+    </li>
+
+    <li>
+      Resources
+      <ul className="text-gray-500 pt-4 space-y-4">
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Examples</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Community</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Guides</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Docs</a></li>
+      </ul>
+    </li>
+
+    <li>
+      Legal
+      <ul className="text-gray-500 pt-4 space-y-4">
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Privacy</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Terms</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Security</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
      </section>
 
      </div>   
