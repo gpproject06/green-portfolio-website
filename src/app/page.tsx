@@ -8,41 +8,51 @@ import rightArrow from '/public/rightArrow.svg'
 export default function Home() {
   return (
     <>
-     <div className="py-10 flex flex-col justify-around ">
-        <div className="text-3xl mb-2 font-bold px-6">
-          Empowering the Next Generation of Business Leaders
-        </div>
-         
-        <div className='px-6'>
-          At the Green Portfolio Project, we are dedicated to equipping high school and college students with essential business development skills.
-        </div>
-      <div className='bg-custom-gradient-diagonal sm:bg-red-500'>
+    {/* Home Section */}
+    <div className=' pt-10 pb-4 bg-custom-gradient-diagonal sm:bg-custom-gradient-diagonal-bottom'>
 
-       <div className=" text-sm mt-5 flex items-center space-x-4 flex-none px-6">
-          <button className="bg-black text-white px-5 py-2 rounded-lg whitespace-nowrap">Get Started</button>
-          <div className="flex items-center">
-              <button className="mr-2">Learn More</button>
-                <Image className="w-5" src={rightArrow} alt="Right Arrow SVG" />
+    <div className=' xl:flex xl:justify-center'>
+
+
+        <div className=" flex flex-col justify-around sm:flex-row sm:items-center items-center max-w-screen-2xl">
+          <div className='w-10/12 xl:w-1/2'> 
+
+            <div className="text-3xl  sm:text-4xl lg:text-6xl 2xl:text-7xl mb-2 font-bold px-6 ">
+                  Empowering the Next Generation of Business Leaders
+            </div>
+            <div className='px-6 xl:py-4 2xl:text-2xl'>
+                At the Green Portfolio Project, we are dedicated to equipping high school and college students with essential business development skills.
+            </div>
+
+            <div className=" text-sm mt-5 flex items-center space-x-4 flex-none px-6 ">
+                <button className="bg-black text-white px-5 py-2 rounded-lg whitespace-nowrap">Get Started</button>
+                <div className="flex items-center">
+                    <button className="mr-2">Learn More</button>
+                    <Image className="w-5" src={rightArrow} alt="Right Arrow SVG" />
+                </div>
+            </div>
           </div>
-       </div>
-        <div className=' py-10 px-6 flex justify-center'>
-          <Image className='w-80'
-            src={moneyTree}
-            alt="Green Portfolio Tree Logo"
-            />
-            <a href="" className='flex justify-center motion-safe:animate-float md:col-span-4 lg:col-span-12 '><svg xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="white" className="w-6 h-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                </svg>
-            </a>
+            <div className=' py-10 sm:py-8 px-6 flex justify-center   '>
+              <Image className='w-80 sm:w-full '
+                src={moneyTree}
+                alt="Green Portfolio Tree Logo"
+                />
+            </div>
+          
+ 
+                </div>
+              </div>
+                <a href="" className='flex justify-center animate-float'><svg xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="white" className="w-12 h-12">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </a>
         </div>
-        </div>
-      </div>
 
       {/*      {/* Mission and Story Section */}
      <div>
 
        {/* Title */}
-       <div className="text-2xl sm:text-4xl lg:text-5xl  text-center px-2 font-bold">
+       <div className="text-2xl sm:text-4xl lg:text-5xl  text-center p-2 font-bold">
        Our Story and Mission
        </div>
 
