@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,14 +7,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        'light-green': '#74C69D',
+      fontFamily: {
+        inter: ['var(--font-inter)', 'sans-serif'],
+        dmsans: ['var(--font-dmsans)', 'sans-serif'],
       },
-      animation: {
-        'float': 'float 2s infinite',
+        colors: {
+          'light-green': '#74C69D',
+        },
+        animation: {
+          'float': 'float 2s infinite',
+        },
       },
     },
-  },
-  plugins: [],
-};
+    plugins: [],
+  };
 export default config;

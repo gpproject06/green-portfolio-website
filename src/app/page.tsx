@@ -4,7 +4,8 @@ import MissionCard from "./MissionCard";
 import EcmCard from "./EcmCard";
 import YouTubeEmbed from './YouTubeEmbed';
 import rightArrow from '/public/rightArrow.svg'
-
+import CourseCard from './CourseCard'
+import backgroundLeaf from '/public/backgroundLeaf.png'
 export default function Home() {
   return (
     <>
@@ -28,7 +29,7 @@ export default function Home() {
         <Image
             src={moneyTree}
             alt="Green Portfolio Tree Logo"
-            width={500}
+            width={70}
             height={500}
         />
             <a href="" className='flex justify-center motion-safe:animate-float md:col-span-4 lg:col-span-12 '><svg xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="white" className="w-6 h-6">
@@ -36,6 +37,40 @@ export default function Home() {
                 </svg>
             </a>
       </div>
+
+      { /* Discover Our Courses Section */ }
+      <div className="flex flex-col items-center text-center mb-20 ">
+  <h1 className="mb-4 mx-3 font-inter font-bold text-2xl">Discover Our Courses</h1>
+  <div className='relative flex justify-end top-24 w-full'>
+  <Image
+            src={backgroundLeaf}
+            alt="background leaf"
+            width={70}
+            height={500}
+            className='absolute'
+        />
+ </div>
+  <p className="font-dmsans leading-5 text-xs px-4 mb-10 ">
+    We offer a variety of courses, including our flagship course on creating your own social media marketing agency.
+    Additionally, we provide specialized workshops on personal finance, business skills, and college admissions.
+  </p>
+
+  <CourseCard imageUrl="/socialMediaCourse.png" title="Social Media Marketing For High Schoolers" />
+  <CourseCard imageUrl="/PitchDesk.png" title="Pitch Deck Building For Investors" />  
+  <CourseCard imageUrl='/stockMarket.png' title='Introduction to the Stock Market Coming Soon'/>
+ 
+
+    <div className='relative w-full'>
+    <Image
+            src={backgroundLeaf}
+            alt="background leaf"
+            width={70}
+            height={500}
+            className='absolute rotate-[-85deg]'
+        />
+        </div>
+  </div>
+
 
       {/*      {/* Mission and Story Section */}
      <div>
