@@ -102,7 +102,7 @@ Our Story and Mission
 <div className="md:grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 md:gap-4  pt-16 pb-24 md:w-11/12  2xl:w-10/12 justify-items-center  ">
 {/* Individial Mission Card Components */}
      <MissionCard 
-      title="Free sdhvbhkldvfkdv Accessible" 
+      title="Free test2 Accessible" 
       description="All courses, resources, and community access are free." 
       linkHref="#" 
       img={Leaf}
