@@ -39,34 +39,33 @@ export default function Home() {
       </div>
 
       { /* Discover Our Courses Section */ }
-      <div className="flex flex-col items-center text-center mb-20 ">
-  <h1 className="mb-4 mx-3 font-inter font-bold text-2xl">Discover Our Courses</h1>
-  <div className='relative flex justify-end top-24 w-full'>
+      <div className="flex flex-col items-center justify-center text-center mb-20 ">
+  <h1 className="mb-4 mx-3 font-inter font-bold text-2xl sm:text-4xl lg:text-5xl">Discover Our Courses</h1>
+  <div className='relative flex justify-end top-28 w-full md:top-10'>
   <Image
             src={backgroundLeaf}
             alt="background leaf"
-            width={70}
+            width={65}
             height={500}
-            className='absolute'
+            className='absolute sm:w-[90px] md:w-[100px] xl:w-[120px] xl:right-5'
         />
  </div>
-  <p className="font-dmsans leading-5 text-xs px-4 mb-10 ">
+  <p className="font-dmsans leading-5 text-sky-950 text-sm px-4 mb-20 w-full sm:text-lg sm:w-11/12 md:mb-16 md:w-11/12 lg:text-xl xl:w-10/12 2xl:w-8/12">
     We offer a variety of courses, including our flagship course on creating your own social media marketing agency.
     Additionally, we provide specialized workshops on personal finance, business skills, and college admissions.
   </p>
-
-  <CourseCard imageUrl="/socialMediaCourse.png" title="Social Media Marketing For High Schoolers" />
-  <CourseCard imageUrl="/PitchDesk.png" title="Pitch Deck Building For Investors" />  
-  <CourseCard imageUrl='/stockMarket.png' title='Introduction to the Stock Market Coming Soon'/>
- 
-
-    <div className='relative w-full'>
+<div className='w-8/12 sm:w-7/12 md:flex md:w-10/12 xl:w-8/12 2xl:w-7/12'>
+  <CourseCard imageUrl="/socialMediaCourse.png" title="Social Media Marketing For High Schoolers" active = {true} />
+  <CourseCard imageUrl="/PitchDesk.png" title="Pitch Deck Building For Investors" active = {true} />  
+  <CourseCard imageUrl='/stockMarket.png' title='Introduction to the Stock Market Coming Soon' active= {false}/>
+</div>
+    <div className='relative w-full bottom-10'>
     <Image
             src={backgroundLeaf}
             alt="background leaf"
             width={70}
             height={500}
-            className='absolute rotate-[-85deg]'
+            className='absolute rotate-[-85deg] sm:w-[100px] xl:w-[120px] xl:left-10'
         />
         </div>
   </div>
