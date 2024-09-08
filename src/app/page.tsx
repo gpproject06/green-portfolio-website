@@ -49,7 +49,7 @@ export default function Home() {
         </div>
 
       { /* Discover Our Courses Section */ }
-      <div className="flex flex-col items-center justify-center  flex-wrap text-center mb-20 ">
+      <div className="flex flex-col items-center justify-center  flex-wrap text-center my-20 ">
   <h1 className="mb-4 mx-3 font-inter font-bold text-2xl sm:text-4xl lg:text-5xl">Discover Our Courses</h1>
   <div className='relative flex justify-end top-28 w-full md:top-10'>
   <Image
