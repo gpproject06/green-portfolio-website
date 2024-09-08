@@ -98,8 +98,7 @@ Our Story & Mission
 {/* Mission cards Background & aligning*/}
 <div className="flex justify-center 2xl:justify-evenly bg-gradient-to-b from-green-100 to-green-400">
 
-<div className="md:grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 md:gap-4 pt-16 pb-24 md:w-11/12  2xl:w-10/12
-flex flex-col items-center gap-10 md:flex-none">
+<div className="md:grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 md:gap-4  pt-16 pb-24 md:w-11/12  2xl:w-10/12 justify-items-center  ">
 {/* Individial Mission Card Components */}
      <MissionCard 
       title="Free and Accessible" 

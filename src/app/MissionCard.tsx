@@ -14,7 +14,7 @@ interface InfoCardProps {
 const MissionCard: React.FC<InfoCardProps> = ({ title, description, linkHref, img }) => {
   return (  
     
-    <div className="flex flex-col items-start">
+    <div className="flex flex-col w-96 md:w-full">
         <Image className="w-7" src={img} alt="card image"/>
         <div className="text-xl font-bold text-black pt-2">{title} </div>
       <p className="text-black py-2">{description}</p>
