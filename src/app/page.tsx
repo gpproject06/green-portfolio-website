@@ -52,11 +52,11 @@ export default function Home() {
 
       {/* Discover Our Courses Section */}
       <div className="flex flex-col items-center justify-center flex-wrap text-center my-20">
-        <h1 className="mb-4 mx-3 font-inter font-bold text-2xl sm:text-4xl lg:text-5xl">Discover Our Courses</h1>
+        <h1 className="mb-4 mx-3 font-inter font-bold text-3xl sm:text-4xl lg:text-5xl">Discover Our Courses</h1>
         <div className='relative flex justify-end top-28 w-full md:top-10'>
           <Image src={backgroundLeaf} alt="background leaf" width={65} height={500} className='absolute sm:w-[90px] md:w-[100px] xl:w-[120px] xl:right-5' />
         </div>
-        <p className="font-dmsans leading-5 text-sky-950 text-sm px-4 mb-20 w-full sm:text-lg sm:w-11/12 md:mb-16 md:w-11/12 lg:text-xl xl:w-10/12 2xl:w-8/12">
+        <p className="font-dmsans leading-5 text-sky-950  mb-10 w-full sm:text-lg sm:w-11/12 md:mb-16 md:w-11/12 lg:text-xl xl:w-10/12 2xl:w-8/12 px-6 xl:py-4 xl:text-2xl">
           We offer a variety of courses, including our flagship course on creating your own social media marketing agency. Additionally, we provide specialized workshops on personal finance, business skills, and college admissions.
         </p>
         <div className='w-8/12 sm:w-7/12 md:flex md:w-10/12 xl:w-8/12 2xl:w-7/12 flex flex-wrap justify-center'>
@@ -75,7 +75,7 @@ export default function Home() {
 
 {/* Title */}
 <div className="text-3xl sm:text-4xl lg:text-5xl tracking-widest text-center px-2 font-bold">
-Our Story & Mission
+Our Story and Mission
 </div>
 
 {/* Description */}
