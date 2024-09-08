@@ -1,33 +1,26 @@
 import React from 'react';
 import Image from 'next/image';
+
+
+import rightArrow from '/public/rightArrow.svg'
 interface InfoCardProps {
   title: string;
   description: string;
   linkHref: string;
-  imageUrl:string;
-  size: number;
-
+  img:string;
 }
 
-const MissionCard: React.FC<InfoCardProps> = ({ title, description, linkHref, imageUrl,size }) => {
-  return (    
-  <div className="p-5 sm:rounded-2xl sm:shadow-2xl">
-  <div>
-        <Image 
-        src={imageUrl} 
-        alt="card image" 
-        width={size} 
-        height={0}/>
-      </div>
-      <div>
-      <div >
-        <div className="text-xl font-medium text-black pt-2">{title}</div>
-        <p className="text-black py-2">{description}</p>
-      </div>
-      <a href={linkHref} className="">
-        Learn more &rarr;
+
+const MissionCard: React.FC<InfoCardProps> = ({ title, description, linkHref, img }) => {
+  return (  
+    
+    <div className="flex flex-col items-start">
+        <Image className="w-7" src={img} alt="card image"/>
+        <div className="text-xl font-bold text-black pt-2">{title} </div>
+      <p className="text-black py-2">{description}</p>
+      <a href={linkHref} className=" flex flex-row gap-2">
+        Learn more <Image className="" src={rightArrow} alt="Right Arrow SVG" />
       </a>
-      </div>
     </div>
   );
 };

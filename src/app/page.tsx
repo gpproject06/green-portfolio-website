@@ -9,6 +9,10 @@ import Youtube from '/public/Youtube.svg';
 import Instagram from '/public/Instagram.svg';
 import Linkedin from '/public/Linkedin.svg';
 import tiktok from '/public/tiktok.svg';
+import Book from '/public/Book.svg';
+import Hand from '/public/Hand.svg';
+import Target from '/public/Target.svg';
+import Leaf from '/public/Leaf.svg';
 
 
 export default function Home() {
@@ -66,20 +70,19 @@ export default function Home() {
 
   {/* Embeded Video component */}
    <YouTubeEmbed videoId="9VlvbpXwLJs" />
-
    </div>
 
    {/* Mission cards Background & aligning*/}
    <div className="flex justify-center 2xl:justify-evenly bg-gradient-to-b from-green-100 to-green-400">
-   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pt-16 pb-24 md:w-11/12 lg:w-full xl:w-11/12 2xl:w-10/12">
 
+   <div className="md:grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 md:gap-4 pt-16 pb-24 md:w-11/12  2xl:w-10/12
+    flex flex-col items-center gap-10 md:flex-none">
   {/* Individial Mission Card Components */}
-  <MissionCard 
+            <MissionCard 
              title="Free and Accessible" 
              description="All courses, resources, and community access are free." 
              linkHref="#" 
-             imageUrl="/leaf.png"
-             size={25}
+             img={Leaf}
 
            />
 
@@ -87,26 +90,21 @@ export default function Home() {
              title="Student-Led and Focused"   
              description="Set and track goals with manageable task breakdowns." 
              linkHref="#" 
-             imageUrl="/target.png"
-             size={25}
-
+             img= {Target}
            />
 
            <MissionCard 
-             title="Secure data encryption" 
-             description="Ensure your data's safety with top-tier encryption." 
+             title="Practical Learning" 
+             description="Our applied knowledge templates and real-world projects ensure you can put your learning into practice." 
              linkHref="#" 
-             imageUrl="/bookIcon.png"
-             size={30}
+            img = {Book}
            />
 
            <MissionCard 
-             title="Customizable notifications" 
+             title="Supportive Environment:" 
              description="Our community is here to support you every step of the way." 
              linkHref="#" 
-             imageUrl="/hands.png"
-             size={33}
-
+            img= {Hand}
            />
    </div>
  </div>
