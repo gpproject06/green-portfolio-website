@@ -87,16 +87,17 @@ Our Story & Mission
  social media marketing, personal finance, and more.
 </div>
 
+<div className='bg-custom-gradient-vertical'>
 
 {/* Embedded Video Background & aligning */}
-<div className="bg-gradient-to-b from-white to-green-100 flex justify-center items-center">
+<div className="flex justify-center items-center">
 
 {/* Embeded Video component */}
 <YouTubeEmbed videoId="9VlvbpXwLJs" />
 </div>
 
 {/* Mission cards Background & aligning*/}
-<div className="flex justify-center 2xl:justify-evenly bg-custom-gradient-vertical">
+<div className="flex justify-center 2xl:justify-evenly ">
 
 <div className="md:grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 md:gap-4  pt-16 pb-24 md:w-11/12  2xl:w-10/12 justify-items-center  ">
 {/* Individial Mission Card Components */}
@@ -105,29 +106,30 @@ Our Story & Mission
       description="All courses, resources, and community access are free." 
       linkHref="#" 
       img={Leaf}
-
-    />
+      
+      />
 
     <MissionCard 
       title="Student-Led and Focused"   
       description="Set and track goals with manageable task breakdowns." 
       linkHref="#" 
       img= {Target}
-    />
+      />
 
     <MissionCard 
       title="Practical Learning" 
       description="Our applied knowledge templates and real-world projects ensure you can put your learning into practice." 
       linkHref="#" 
-     img = {Book}
-    />
+      img = {Book}
+      />
 
     <MissionCard 
       title="Supportive Environment:" 
       description="Our community is here to support you every step of the way." 
       linkHref="#" 
-     img= {Hand}
-    />
+      img= {Hand}
+      />
+  </div>
 </div>
 </div>
 </div>
