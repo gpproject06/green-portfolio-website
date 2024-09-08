@@ -10,7 +10,7 @@ import Instagram from '/public/instagram.svg';
 import Linkedin from '/public/linkedin.svg';
 import tiktok from '/public/tiktok.svg';
 import Book from '/public/Book.svg';
-import Hand from '/public/Hand.svg';
+import Support from '/public/Support.svg';
 import Target from '/public/Target.svg';
 import Leaf from '/public/Leaf.svg';
 
@@ -96,17 +96,14 @@ Our Story and Mission
 <YouTubeEmbed videoId="9VlvbpXwLJs" />
 </div>
 
-{/* Mission cards Background & aligning*/}
-<div className="flex justify-center 2xl:justify-evenly ">
 
-<div className="md:grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 md:gap-4  pt-16 pb-24 md:w-11/12  2xl:w-10/12 justify-items-center  ">
-{/* Individial Mission Card Components */}
+
+<section className="pt-20 pb-24 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-14 sm:gap-10 sm:px-5 md:px-0 justify-items-center">  
      <MissionCard 
-      title="Free test2 Accessible" 
+      title="Free and Accessible" 
       description="All courses, resources, and community access are free." 
       linkHref="#" 
       img={Leaf}
-      
       />
 
     <MissionCard 
@@ -124,13 +121,13 @@ Our Story and Mission
       />
 
     <MissionCard 
-      title="Supportive Environment:" 
+      title="Supportive Environment" 
       description="Our community is here to support you every step of the way." 
       linkHref="#" 
-      img= {Hand}
+      img= {Support}
       />
-  </div>
-</div>
+    
+  </section>
 </div>
 </div>
 

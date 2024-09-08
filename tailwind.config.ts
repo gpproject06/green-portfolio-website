@@ -29,6 +29,10 @@ const config: Config = {
           '50%': { transform: 'translateY(-30px)' },
         },
       },
+      screens: {
+        'xs': '450px', // Custom screen size for 300px and higher
+        'xxs': '360px', // Custom screen size for 300px and higher
+      },
     },
   },
   plugins: [],
