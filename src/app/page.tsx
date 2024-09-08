@@ -4,10 +4,10 @@ import MissionCard from "./MissionCard";
 import EcmCard from "./EcmCard";
 import YouTubeEmbed from './YouTubeEmbed';
 import rightArrow from '/public/rightArrow.svg'
-import Logo from '/public/Logo.svg'
+import Logo from '/public/logo.svg'
 import Youtube from '/public/Youtube.svg';
-import Instagram from '/public/Instagram.svg';
-import Linkedin from '/public/Linkedin.svg';
+import Instagram from '/public/instagram.svg';
+import Linkedin from '/public/linkedin.svg';
 import tiktok from '/public/tiktok.svg';
 import Book from '/public/Book.svg';
 import Hand from '/public/Hand.svg';
