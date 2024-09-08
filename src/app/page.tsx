@@ -17,10 +17,10 @@ export default function Home() {
         <div className=" flex flex-col justify-around sm:flex-row sm:items-center items-center max-w-screen-2xl">
           <div className='w-10/12 xl:w-1/2'> 
 
-            <div className="text-3xl  sm:text-4xl lg:text-6xl 2xl:text-7xl mb-2 font-bold px-6 ">
+            <div className="text-3xl  sm:text-4xl lg:text-6xl xl:text-7xl mb-2 font-bold px-6 ">
                   Empowering the Next Generation of Business Leaders
             </div>
-            <div className='px-6 xl:py-4 2xl:text-2xl'>
+            <div className='px-6 xl:py-4 xl:text-2xl'>
                 At the Green Portfolio Project, we are dedicated to equipping high school and college students with essential business development skills.
             </div>
 
