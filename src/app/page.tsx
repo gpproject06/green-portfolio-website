@@ -9,34 +9,44 @@ import backgroundLeaf from '/public/backgroundLeaf.png'
 export default function Home() {
   return (
     <>
-     <div className="px-6 py-10 flex flex-col justify-around my-10 bg-gradient-to-b from-white to-light-green">
-        <div className="text-3xl my-4">
-          Empowering the Next Generation of Business Leaders
-        </div>
-         
-        <div>
-          At the Green Portfolio Project, we are dedicated to equipping high school and college students with essential business development skills.
-        </div>
+    {/* Home Section */}
+    <div className=' pt-10 pb-4 bg-custom-gradient-diagonal sm:bg-custom-gradient-diagonal-bottom'>
 
-       <div className="my-10 flex items-center space-x-4 flex-none">
-          <button className="bg-black text-white px-7 py-2 rounded-lg">Get Started</button>
-          <div className="flex items-center">
-              <button className="mr-2">Learn More</button>
-                <Image className="" src={rightArrow} alt="Right Arrow SVG" />
+    <div className=' xl:flex xl:justify-center'>
+
+
+        <div className=" flex flex-col justify-around sm:flex-row sm:items-center items-center max-w-screen-2xl">
+          <div className='w-10/12 xl:w-1/2'> 
+            <div className="text-3xl  sm:text-4xl lg:text-6xl xl:text-7xl mb-2 font-bold px-6 ">
+                  Empowering the Next Generation of Business Leaders
+            </div>
+            <div className='px-6 xl:py-4 xl:text-2xl'>
+                At the Green Portfolio Project, we are dedicated to equipping high school and college students with essential business development skills.
+            </div>
+
+            <div className=" text-sm mt-5 flex items-center space-x-4 flex-none px-6 ">
+                <button className="bg-black text-white px-5 py-2 rounded-lg whitespace-nowrap">Get Started</button>
+                <div className="flex items-center">
+                    <button className="mr-2">Learn More</button>
+                    <Image className="w-5" src={rightArrow} alt="Right Arrow SVG" />
+                </div>
+            </div>
           </div>
-       </div>
-
-        <Image
-            src={moneyTree}
-            alt="Green Portfolio Tree Logo"
-            width={70}
-            height={500}
-        />
-            <a href="" className='flex justify-center motion-safe:animate-float md:col-span-4 lg:col-span-12 '><svg xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="white" className="w-6 h-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                </svg>
-            </a>
-      </div>
+            <div className=' py-10 sm:py-8 px-6 flex justify-center   '>
+              <Image className='w-80 sm:w-full '
+                src={moneyTree}
+                alt="Green Portfolio Tree Logo"
+                />
+            </div>
+          
+ 
+                </div>
+              </div>
+                <a href="" className='flex justify-center animate-float'><svg xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="white" className="w-12 h-12">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </a>
+        </div>
 
       { /* Discover Our Courses Section */ }
       <div className="flex flex-col items-center justify-center  flex-wrap text-center mb-20 ">
@@ -75,12 +85,12 @@ export default function Home() {
      <div>
 
        {/* Title */}
-       <div className="text-3xl sm:text-4xl lg:text-5xl tracking-widest text-center px-2 font-bold">
-       Our Story & Mission
+       <div className="text-2xl sm:text-4xl lg:text-5xl  text-center p-2 font-bold">
+       Our Story and Mission
        </div>
 
        {/* Description */}
-       <div className= "text-center py-5 md:py-7 2xl:py-10 px-7 sm:px-28 2xl:px-64 text-lg lg:text-xl">
+       <div className= "text-center py-5 md:py-7 2xl:py-10 px-2 sm:px-28 2xl:px-64 lg:text-xl">
         Welcome to the Green Portfolio Project (GPP), a student-led nonprofit
         organization committed to empowering the next generation of youth with
         the skills they need to succeed in the business world. Our mission is
@@ -88,9 +98,10 @@ export default function Home() {
         social media marketing, personal finance, and more.
      </div>
 
+    <div className='bg-custom-gradient-vertical'>
 
    {/* Embedded Video Background & aligning */}
-   <div className="bg-gradient-to-b from-white to-green-100 flex justify-center items-center">
+   <div className=" flex justify-center items-center">
 
   {/* Embeded Video component */}
    <YouTubeEmbed videoId="9VlvbpXwLJs" />
@@ -98,7 +109,7 @@ export default function Home() {
    </div>
 
    {/* Mission cards Background & aligning*/}
-   <div className="flex justify-center 2xl:justify-evenly bg-gradient-to-b from-green-100 to-green-400">
+   <div className="flex justify-center 2xl:justify-evenly ">
    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pt-16 pb-24 md:w-11/12 lg:w-full xl:w-11/12 2xl:w-10/12">
 
   {/* Individial Mission Card Components */}
@@ -108,8 +119,8 @@ export default function Home() {
              linkHref="#" 
              imageUrl="/leaf.png"
              size={25}
-
-           />
+             
+             />
 
            <MissionCard 
              title="Student-Led and Focused"   
@@ -117,8 +128,8 @@ export default function Home() {
              linkHref="#" 
              imageUrl="/target.png"
              size={25}
-
-           />
+             
+             />
 
            <MissionCard 
              title="Secure data encryption" 
@@ -126,7 +137,7 @@ export default function Home() {
              linkHref="#" 
              imageUrl="/bookIcon.png"
              size={30}
-           />
+             />
 
            <MissionCard 
              title="Customizable notifications" 
@@ -134,10 +145,11 @@ export default function Home() {
              linkHref="#" 
              imageUrl="/hands.png"
              size={33}
-
-           />
+             
+             />
    </div>
  </div>
+  </div>
 
       
 
