@@ -131,22 +131,47 @@ Our Story and Mission
 </div>
 </div>
 
-      {/* Sign up Section */}
-      <section className="py-20 text-center space-y-10">
-        <p className="text-5xl font-bold">
-          Sign up for <br className="sm:hidden" />free today
-        </p>
-        <p className="text-lg sm:text-xl">
-          Empowering students with free courses and a vibrant community<br className="hidden sm:block" /> to thrive in business. Join us and build your future today!
-        </p>
-        <div className="flex justify-center gap-4">
-          <button className="bg-black text-white py-2 px-4 rounded-lg">Sign Up</button>
-          <button className="text-lg flex items-center text-black gap-2">
-            Learn more
-            <Image className="w-7" src={rightArrow} alt="Right Arrow SVG" />
-          </button>
-        </div>
-      </section>
+     {/* Sign up Section */}
+<section className="py-20 text-center space-y-10 bg-custom-gradient-white relative">
+
+{/* Top-right leaf */}
+    <Image 
+      src={backgroundLeaf} 
+      alt="background leaf" 
+      width={65} 
+      height={500} 
+      className='absolute right-0 top-[-20px] sm:top-0 sm:w-[90px] md:w-[100px] xl:w-[120px] xl:right-5' 
+    />
+
+    <p className="text-5xl font-bold">
+  Sign up for <br className="sm:hidden" />free today 
+    </p>
+
+{/* Bottom-left leaf */}
+    <Image 
+      src={backgroundLeaf} 
+      alt="background leaf" 
+      width={70} 
+      height={500} 
+      className='absolute rotate-[-85deg] left-0 bottom-[-20px] sm:bottom-0 sm:w-[100px] xl:w-[120px] xl:left-10' 
+    />
+
+    <p className="text-lg sm:text-xl">
+      Empowering students with free courses and a vibrant community<br className="hidden sm:block" /> to thrive in business. Join us and build your future today!
+    </p>
+
+    <div className="flex justify-center gap-4">
+    <button className="bg-black text-white py-2 px-4 rounded-lg">Sign Up</button>
+    <button className="text-lg flex items-center text-black gap-2"> 
+      Learn more
+      <Image className="w-7" src={rightArrow} alt="Right Arrow SVG" />
+    </button>
+</div>
+
+</section>
+      {/* End of sign up */}
+
+
 
       {/* Footer Section */}
       <section className="bg-black gap-10 py-10 px-10 2xl:px-36 text-center flex flex-col sm:flex-row text-white">
