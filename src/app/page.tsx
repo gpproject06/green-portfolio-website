@@ -131,53 +131,38 @@ Our Story and Mission
 </div>
 </div>
 
-     {/* Sign up Section */}
-<section className="py-20 text-center space-y-10 bg-custom-gradient-white relative">
-
-{/* Top-right leaf */}
-    <Image 
-      src={backgroundLeaf} 
-      alt="background leaf" 
-      width={65} 
-      height={500} 
-      className='absolute right-0 top-[-20px] sm:top-0 sm:w-[90px] md:w-[100px] xl:w-[120px] xl:right-5' 
-    />
-
-    <p className="text-5xl font-bold">
-  Sign up for <br className="sm:hidden" />free today 
-    </p>
-
-{/* Bottom-left leaf */}
-    <Image 
-      src={backgroundLeaf} 
-      alt="background leaf" 
-      width={70} 
-      height={500} 
-      className='absolute rotate-[-85deg] left-0 bottom-[-20px] sm:bottom-0 sm:w-[100px] xl:w-[120px] xl:left-10' 
-    />
-
-    <p className="text-lg sm:text-xl">
-      Empowering students with free courses and a vibrant community<br className="hidden sm:block" /> to thrive in business. Join us and build your future today!
-    </p>
-
-    <div className="flex justify-center gap-4">
-    <button className="bg-black text-white py-2 px-4 rounded-lg">Sign Up</button>
-    <button className="text-lg flex items-center text-black gap-2"> 
-      Learn more
-      <Image className="w-7" src={rightArrow} alt="Right Arrow SVG" />
-    </button>
-</div>
-
-</section>
-      {/* End of sign up */}
 
 
+      {/* Sign up Section */}
+      <section className="pt-9 pb-11 md:py-24 lg:py-32  bg-custom-gradient-white flex flex-col items-center relative">
+
+      <Image className="w-14 xs:w-20 sm:w-24 md:w-24 lg:w-36 absolute top-9 md:top-5     right-2 sm:right-6  md:right-12 xl:right-32 2xl:right-52 z-0" src={backgroundLeaf} alt="background leaf"/>
+      <Image className="w-20 xs:w-24 sm:w-28 md:w-32 lg:w-44 absolute sm:bottom-20 bottom-24 lg:bottom-10 left-3 sm:left-7 xl:left-24 2xl:left-52       
+      scale-x-[-1] scale-y-[-1] rotate-90" src={backgroundLeaf} alt="background leaf"/>
+
+        <div className="text-3xl xs:text-4xl md:text-5xl font-bold text-center w-48 xs:w-auto sm:w-auto flex z-10">
+          Sign up for free today 
+          
+        </div>
+
+        
+        <p className=" text-center md:text-lg w-64 xs:w-96 md:w-auto pt-5 pb-10 z-10">
+          Empowering students with free courses and a vibrant community <br className="hidden md:block" /> to thrive in business. Join us and build your future today!
+        </p>
+        <div className="flex justify-center gap-4">
+          <button className="bg-black text-white text-base py-2 px-5 rounded-xl">Sign Up</button>
+          <button className="text-lg font-medium flex items-center gap-1">
+            Learn more
+            <Image className="w-4 pt-1" src={rightArrow} alt="Right Arrow button" />
+          </button>
+        </div>
+      </section>
 
       {/* Footer Section */}
-      <section className="bg-black gap-10 py-10 px-10 2xl:px-36 text-center flex flex-col sm:flex-row text-white">
+      <section className="bg-black gap-10 py-10 pl-5 2xl:px-36 text-center flex flex-col sm:flex-row text-white">
         <div className="flex flex-col gap-7">
           <Image className="w-12 2xl:w-14 rounded-2xl shadow-md shadow-green-500" src={Logo} alt="Logo SVG" />
-          <p className="text-sky-200 text-start text-lg 2xl:text-2xl sm:text-base">
+          <p className="text-sky-200 text-start  2xl:text-2xl sm:text-base">
             Empowering the Next Generation of <br className="hidden md:block" /> Business Leaders
           </p>
           <div className="flex flex-row gap-5 sm:pt-20">
