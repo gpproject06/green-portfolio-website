@@ -10,9 +10,14 @@ import Instagram from '/public/instagram.svg';
 import Linkedin from '/public/linkedin.svg';
 import tiktok from '/public/tiktok.svg';
 import Book from '/public/Book.svg';
-import Hand from '/public/Hand.svg';
+import Support from '/public/Support.svg';
 import Target from '/public/Target.svg';
 import Leaf from '/public/Leaf.svg';
+
+import books from "/public/books.svg"
+import community from "/public/community.svg"
+import courses from "/public/courses.svg"
+import sprout from "/public/sprout.svg"
 
 import CourseCard from './CourseCard';
 import backgroundLeaf from '/public/backgroundLeaf.png';
@@ -74,7 +79,7 @@ export default function Home() {
            <div>
 
 {/* Title */}
-<div className="text-3xl sm:text-4xl lg:text-5xl tracking-widest text-center px-2 font-bold">
+<div className="text-3xl sm:text-4xl lg:text-5xl  text-center px-2 font-bold">
 Our Story and Mission
 </div>
 
@@ -96,17 +101,14 @@ Our Story and Mission
 <YouTubeEmbed videoId="9VlvbpXwLJs" />
 </div>
 
-{/* Mission cards Background & aligning*/}
-<div className="flex justify-center 2xl:justify-evenly ">
 
-<div className="md:grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 md:gap-4  pt-16 pb-24 md:w-11/12  2xl:w-10/12 justify-items-center  ">
-{/* Individial Mission Card Components */}
+
+<section className="pt-24 pb-20 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-14 sm:gap-10 sm:px-5 md:px-0 justify-items-center">  
      <MissionCard 
       title="Free and Accessible" 
       description="All courses, resources, and community access are free." 
       linkHref="#" 
       img={Leaf}
-      
       />
 
     <MissionCard 
@@ -124,52 +126,106 @@ Our Story and Mission
       />
 
     <MissionCard 
-      title="Supportive Environment:" 
+      title="Supportive Environment" 
       description="Our community is here to support you every step of the way." 
       linkHref="#" 
-      img= {Hand}
+      img= {Support}
       />
-  </div>
-</div>
+    
+  </section>
 </div>
 </div>
 
+<section className="flex flex-col items-center">
+    <p className="text-xs font-medium border border-gray-300 rounded-xl px-5 py-1 mt-7 ">Everything you need</p>
+    
+    <p className = "text-3xl sm:text-4xl lg:text-5xl text-center font-bold py-5">Education, Community, <br></br>and Mentorship</p>
+       
+         <div className="w-auto px-5 sm:px-0  sm:w-8/12 text-center text-2xl pb-20">
+           Empower your journey with comprehensive learning, a <br className="hidden lg:block" /> supportive network, and personalized guidance to <br className="hidden lg:block" /> achieve your goals.
+         </div>
+
+{/* ECM cards Background & aligning*/}
+<div className="flex justify-center">
+   <div className="grid grid-cols-1 sm:grid-cols-2 w-11/12 xs:w-9/12 xl:w-8/12 2xl:w-7/12
+   lg:w-10/12 gap-6 lg:gap-10 xl:gap-14 2xl:gap-28 lg:py-10 pb-9">
+
+   {/* ECM CardComponents */}
+     <EcmCard 
+       title="Courses and Tutorials"
+       description="Master essential business skills with our courses. Learn social media marketing and personal finance through practical tutorials" 
+       img={courses}
+     />
+
+     <EcmCard 
+       title="Vibrant Online Community" 
+       description="Join peers to collaborate, share resources, and build a network of future leaders in our supportive community." 
+       img={community}
+     />
+
+     <EcmCard 
+       title="Extensive Resource Library" 
+       description="Explore scholarships, study abroad programs, and more in our curated resource library to further your education and career."
+       img={books}
+     />
+
+     <EcmCard
+       title="Hands On Experience"
+       description="Master essential business skills with our courses. Learn social media marketing and personal finance through practical tutorials" 
+       img={sprout}
+     />
+   </div>
+ </div>
+     </section>
+
+
+
+
+
       {/* Sign up Section */}
-      <section className="py-20 text-center space-y-10">
-        <p className="text-5xl font-bold">
-          Sign up for <br className="sm:hidden" />free today
-        </p>
-        <p className="text-lg sm:text-xl">
-          Empowering students with free courses and a vibrant community<br className="hidden sm:block" /> to thrive in business. Join us and build your future today!
+      <section className="pt-32 pb-11 md:py-24 lg:py-32  bg-custom-gradient-white flex flex-col items-center relative">
+
+      <Image className="w-14 xs:w-20 sm:w-24 md:w-24 lg:w-36 absolute top-30 md:top-5     right-2 sm:right-6  md:right-12 xl:right-32 2xl:right-52 z-0" src={backgroundLeaf} alt="background leaf"/>
+      <Image className="w-20 xs:w-24 sm:w-28 md:w-32 lg:w-44 absolute sm:bottom-20 bottom-24 lg:bottom-10 left-3 sm:left-7 xl:left-24 2xl:left-52       
+      scale-x-[-1] scale-y-[-1] rotate-90" src={backgroundLeaf} alt="background leaf"/>
+
+        <div className="text-3xl xs:text-4xl md:text-5xl font-bold text-center w-48 xs:w-auto sm:w-auto flex z-10">
+          Sign up for free today 
+          
+        </div>
+
+        
+        <p className=" text-center md:text-lg w-64 xs:w-96 md:w-auto pt-5 pb-10 z-10">
+          Empowering students with free courses and a vibrant community <br className="hidden md:block" /> to thrive in business. Join us and build your future today!
         </p>
         <div className="flex justify-center gap-4">
-          <button className="bg-black text-white py-2 px-4 rounded-lg">Sign Up</button>
-          <button className="text-lg flex items-center text-black gap-2">
+          <button className="bg-black text-white text-base py-2 px-5 rounded-xl">Sign Up</button>
+          <button className="text-lg font-medium flex items-center gap-1">
             Learn more
-            <Image className="w-7" src={rightArrow} alt="Right Arrow SVG" />
+            <Image className="w-4 pt-1" src={rightArrow} alt="Right Arrow button" />
           </button>
         </div>
       </section>
 
       {/* Footer Section */}
-      <section className="bg-black gap-10 py-10 px-10 2xl:px-36 text-center flex flex-col sm:flex-row text-white">
-        <div className="flex flex-col gap-7">
-          <Image className="w-12 2xl:w-14 rounded-2xl shadow-md shadow-green-500" src={Logo} alt="Logo SVG" />
-          <p className="text-sky-200 text-start text-lg 2xl:text-2xl sm:text-base">
+      <section className="bg-black gap-10 py-10 pl-4 2xl:px-36 text-center flex flex-col sm:flex-row text-white">
+        <div className="flex flex-col gap-4">
+          <Image className="w-11 2xl:w-14 rounded-2xl shadow-md shadow-green-500" src={Logo} alt="Logo SVG" />
+          <p className="text-sky-200 text-start  2xl:text-2xl text-sm">
             Empowering the Next Generation of <br className="hidden md:block" /> Business Leaders
           </p>
-          <div className="flex flex-row gap-5 sm:pt-20">
+          <div className="flex flex-row gap-5 sm:pt-20 py-4">
             <a href="https://www.youtube.com/watch?v=9VlvbpXwLJs&t=3616s" target="_blank" rel="noopener noreferrer">
-              <Image className="w-10 2xl:w-12" src={Youtube} alt="Youtube SVG" />
+              <Image className="w-8 2xl:w-12" src={Youtube} alt="Youtube SVG" />
             </a>
             <a href="https://www.instagram.com/green_portfolio_project?igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer">
-              <Image className="w-8 2xl:w-10" src={Instagram} alt="Instagram SVG" />
+              <Image className="w-6 2xl:w-10" src={Instagram} alt="Instagram SVG" />
             </a>
             <a href="https://www.linkedin.com/company/green-portfolio-project/" target="_blank" rel="noopener noreferrer">
-              <Image className="w-8 2xl:w-10" src={Linkedin} alt="LinkedIn SVG" />
+              <Image className="w-6 2xl:w-10" src={Linkedin} alt="LinkedIn SVG" />
             </a>
             <a href="https://www.tiktok.com/@greenportfolioproject1?_t=8pIWxByNnCQ&_r=1" target="_blank" rel="noopener noreferrer">
-              <Image className="w-8 2xl:w-10" src={tiktok} alt="TikTok SVG" />
+              <Image className="w-6 2xl:w-10" src={tiktok} alt="TikTok SVG" />
             </a>
           </div>
         </div>
