@@ -14,6 +14,11 @@ import Support from '/public/Support.svg';
 import Target from '/public/Target.svg';
 import Leaf from '/public/Leaf.svg';
 
+import books from "/public/books.svg"
+import community from "/public/community.svg"
+import courses from "/public/courses.svg"
+import sprout from "/public/sprout.svg"
+
 import CourseCard from './CourseCard';
 import backgroundLeaf from '/public/backgroundLeaf.png';
 
@@ -74,7 +79,7 @@ export default function Home() {
            <div>
 
 {/* Title */}
-<div className="text-3xl sm:text-4xl lg:text-5xl tracking-widest text-center px-2 font-bold">
+<div className="text-3xl sm:text-4xl lg:text-5xl  text-center px-2 font-bold">
 Our Story and Mission
 </div>
 
@@ -98,7 +103,7 @@ Our Story and Mission
 
 
 
-<section className="pt-20 pb-24 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-14 sm:gap-10 sm:px-5 md:px-0 justify-items-center">  
+<section className="pt-24 pb-20 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-14 sm:gap-10 sm:px-5 md:px-0 justify-items-center">  
      <MissionCard 
       title="Free and Accessible" 
       description="All courses, resources, and community access are free." 
@@ -131,12 +136,56 @@ Our Story and Mission
 </div>
 </div>
 
+<section className="flex flex-col items-center">
+    <p className="text-xs font-medium border border-gray-300 rounded-xl px-5 py-1 mt-7 ">Everything you need</p>
+    
+    <p className = "text-3xl sm:text-4xl lg:text-5xl text-center font-bold py-5">Education, Community, <br></br>and Mentorship</p>
+       
+         <div className="w-auto px-5 sm:px-0  sm:w-8/12 text-center text-2xl pb-20">
+           Empower your journey with comprehensive learning, a <br className="hidden lg:block" /> supportive network, and personalized guidance to <br className="hidden lg:block" /> achieve your goals.
+         </div>
+
+{/* ECM cards Background & aligning*/}
+<div className="flex justify-center">
+   <div className="grid grid-cols-1 sm:grid-cols-2 w-11/12 xs:w-9/12 xl:w-8/12 2xl:w-7/12
+   lg:w-10/12 gap-6 lg:gap-10 xl:gap-14 2xl:gap-28 lg:py-10 pb-9">
+
+   {/* ECM CardComponents */}
+     <EcmCard 
+       title="Courses and Tutorials"
+       description="Master essential business skills with our courses. Learn social media marketing and personal finance through practical tutorials" 
+       img={courses}
+     />
+
+     <EcmCard 
+       title="Vibrant Online Community" 
+       description="Join peers to collaborate, share resources, and build a network of future leaders in our supportive community." 
+       img={community}
+     />
+
+     <EcmCard 
+       title="Extensive Resource Library" 
+       description="Explore scholarships, study abroad programs, and more in our curated resource library to further your education and career."
+       img={books}
+     />
+
+     <EcmCard
+       title="Hands On Experience"
+       description="Master essential business skills with our courses. Learn social media marketing and personal finance through practical tutorials" 
+       img={sprout}
+     />
+   </div>
+ </div>
+     </section>
+
+
+
 
 
       {/* Sign up Section */}
-      <section className="pt-9 pb-11 md:py-24 lg:py-32  bg-custom-gradient-white flex flex-col items-center relative">
+      <section className="pt-32 pb-11 md:py-24 lg:py-32  bg-custom-gradient-white flex flex-col items-center relative">
 
-      <Image className="w-14 xs:w-20 sm:w-24 md:w-24 lg:w-36 absolute top-9 md:top-5     right-2 sm:right-6  md:right-12 xl:right-32 2xl:right-52 z-0" src={backgroundLeaf} alt="background leaf"/>
+      <Image className="w-14 xs:w-20 sm:w-24 md:w-24 lg:w-36 absolute top-30 md:top-5     right-2 sm:right-6  md:right-12 xl:right-32 2xl:right-52 z-0" src={backgroundLeaf} alt="background leaf"/>
       <Image className="w-20 xs:w-24 sm:w-28 md:w-32 lg:w-44 absolute sm:bottom-20 bottom-24 lg:bottom-10 left-3 sm:left-7 xl:left-24 2xl:left-52       
       scale-x-[-1] scale-y-[-1] rotate-90" src={backgroundLeaf} alt="background leaf"/>
 
@@ -159,24 +208,24 @@ Our Story and Mission
       </section>
 
       {/* Footer Section */}
-      <section className="bg-black gap-10 py-10 pl-5 2xl:px-36 text-center flex flex-col sm:flex-row text-white">
-        <div className="flex flex-col gap-7">
-          <Image className="w-12 2xl:w-14 rounded-2xl shadow-md shadow-green-500" src={Logo} alt="Logo SVG" />
-          <p className="text-sky-200 text-start  2xl:text-2xl sm:text-base">
+      <section className="bg-black gap-10 py-10 pl-4 2xl:px-36 text-center flex flex-col sm:flex-row text-white">
+        <div className="flex flex-col gap-4">
+          <Image className="w-11 2xl:w-14 rounded-2xl shadow-md shadow-green-500" src={Logo} alt="Logo SVG" />
+          <p className="text-sky-200 text-start  2xl:text-2xl text-sm">
             Empowering the Next Generation of <br className="hidden md:block" /> Business Leaders
           </p>
-          <div className="flex flex-row gap-5 sm:pt-20">
+          <div className="flex flex-row gap-5 sm:pt-20 py-4">
             <a href="https://www.youtube.com/watch?v=9VlvbpXwLJs&t=3616s" target="_blank" rel="noopener noreferrer">
-              <Image className="w-10 2xl:w-12" src={Youtube} alt="Youtube SVG" />
+              <Image className="w-8 2xl:w-12" src={Youtube} alt="Youtube SVG" />
             </a>
             <a href="https://www.instagram.com/green_portfolio_project?igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer">
-              <Image className="w-8 2xl:w-10" src={Instagram} alt="Instagram SVG" />
+              <Image className="w-6 2xl:w-10" src={Instagram} alt="Instagram SVG" />
             </a>
             <a href="https://www.linkedin.com/company/green-portfolio-project/" target="_blank" rel="noopener noreferrer">
-              <Image className="w-8 2xl:w-10" src={Linkedin} alt="LinkedIn SVG" />
+              <Image className="w-6 2xl:w-10" src={Linkedin} alt="LinkedIn SVG" />
             </a>
             <a href="https://www.tiktok.com/@greenportfolioproject1?_t=8pIWxByNnCQ&_r=1" target="_blank" rel="noopener noreferrer">
-              <Image className="w-8 2xl:w-10" src={tiktok} alt="TikTok SVG" />
+              <Image className="w-6 2xl:w-10" src={tiktok} alt="TikTok SVG" />
             </a>
           </div>
         </div>
