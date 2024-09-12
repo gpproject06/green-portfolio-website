@@ -6,6 +6,7 @@ import YouTubeEmbed from './YouTubeEmbed';
 import rightArrow from '/public/rightArrow.svg'
 import CourseCard from './CourseCard'
 import backgroundLeaf from '/public/backgroundLeaf.png'
+import testLeaf from '/public/testLeaf.svg'
 export default function Home() {
   return (
     <>
@@ -29,7 +30,7 @@ export default function Home() {
         <Image
             src={moneyTree}
             alt="Green Portfolio Tree Logo"
-            width={70}
+            width={500}
             height={500}
         />
             <a href="" className='flex justify-center motion-safe:animate-float md:col-span-4 lg:col-span-12 '><svg xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="white" className="w-6 h-6">
@@ -41,14 +42,13 @@ export default function Home() {
       { /* Discover Our Courses Section */ }
       <div className="flex flex-col items-center justify-center text-center mb-20 ">
   <h1 className="mb-4 mx-3 font-inter font-bold text-2xl sm:text-4xl lg:text-5xl">Discover Our Courses</h1>
-  <div className='relative flex justify-end top-28 w-full md:top-10'>
+  <div className='relative flex justify-end top-16 w-full md:top-10'>
   <Image
-            src={backgroundLeaf}
-            alt="background leaf"
-            width={65}
-            height={500}
-            className='absolute sm:w-[90px] md:w-[100px] xl:w-[120px] xl:right-5'
+            src={testLeaf}
+            alt="tested leaf"
+            className='absolute w-[80px] sm:w-[90px] md:w-[100px] xl:w-[120px] xl:right-5 '
         />
+        
  </div>
   <p className="font-dmsans leading-5 text-sky-950 text-sm px-4 mb-20 w-full sm:text-lg sm:w-11/12 md:mb-16 md:w-11/12 lg:text-xl xl:w-10/12 2xl:w-8/12">
     We offer a variety of courses, including our flagship course on creating your own social media marketing agency.
@@ -61,10 +61,8 @@ export default function Home() {
 </div>
     <div className='relative w-full bottom-10'>
     <Image
-            src={backgroundLeaf}
+            src={testLeaf}
             alt="background leaf"
-            width={70}
-            height={500}
             className='absolute rotate-[-85deg] sm:w-[100px] xl:w-[120px] xl:left-10'
         />
         </div>
