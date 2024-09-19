@@ -5,7 +5,6 @@ import EcmCard from "./EcmCard";
 import YouTubeEmbed from './YouTubeEmbed';
 import rightArrow from '/public/rightArrow.svg'
 import CourseCard from './CourseCard'
-import backgroundLeaf from '/public/backgroundLeaf.png'
 import testLeaf from '/public/testLeaf.svg'
 export default function Home() {
   return (
