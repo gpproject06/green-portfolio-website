@@ -29,11 +29,11 @@ export default function Home() {
         <div className='xl:flex xl:justify-center'>
           <div className="flex flex-col justify-around sm:flex-row sm:items-center items-center max-w-screen-2xl">
             <div className='w-10/12 xl:w-1/2'>
-              <div className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl mb-2 font-bold px-6">
+              <div className="text-gradient text-3xl sm:text-4xl lg:text-6xl xl:text-7xl mb-2 font-bold px-6">
                 Empowering the Next Generation of Business Leaders
               </div>
-              <div className='px-6 xl:py-4 xl:text-2xl'>
-                At the Green Portfolio Project, we are dedicated to equipping high school and college students with essential business development skills.
+              <div className='pl-6 xl:py-4 xl:text-2xl text-min-blue'>
+                At the Green Portfolio Project, we are <br /> dedicated to equipping high school <br /> and college students with essential <br /> business development skills.
               </div>
               <div className="text-sm mt-5 flex items-center space-x-4 flex-none px-6">
                 <button className="bg-black text-white px-5 py-2 rounded-lg whitespace-nowrap">Get Started</button>
@@ -57,11 +57,11 @@ export default function Home() {
 
       {/* Discover Our Courses Section */}
       <div className="flex flex-col items-center justify-center flex-wrap text-center my-20">
-        <h1 className="mb-4 mx-3 font-inter font-bold text-3xl sm:text-4xl lg:text-5xl">Discover Our Courses</h1>
+        <h1 className="text-gradient mb-4 mx-3 font-inter font-bold text-3xl sm:text-4xl lg:text-5xl">Discover Our Courses</h1>
         <div className='relative flex justify-end top-28 w-full md:top-10'>
           <Image src={backgroundLeaf} alt="background leaf" width={65} height={500} className='absolute sm:w-[90px] md:w-[100px] xl:w-[120px] xl:right-5' />
         </div>
-        <p className="font-dmsans leading-5 text-sky-950  mb-10 w-full sm:text-lg sm:w-11/12 md:mb-16 md:w-11/12 lg:text-xl xl:w-10/12 2xl:w-8/12 px-6 xl:py-4 xl:text-2xl">
+        <p className="font-dmsans leading-5 text-min-blue  mb-10 w-full sm:text-lg sm:w-11/12 md:mb-16 md:w-11/12 lg:text-xl xl:w-10/12 2xl:w-8/12 px-6 xl:py-4 xl:text-2xl">
           We offer a variety of courses, including our flagship course on creating your own social media marketing agency. Additionally, we provide specialized workshops on personal finance, business skills, and college admissions.
         </p>
         <div className='w-8/12 sm:w-7/12 md:flex md:w-10/12 xl:w-8/12 2xl:w-7/12 flex flex-wrap justify-center'>
@@ -79,12 +79,12 @@ export default function Home() {
            <div>
 
 {/* Title */}
-<div className="text-3xl sm:text-4xl lg:text-5xl  text-center px-2 font-bold">
+<div className="text-gradient text-3xl sm:text-4xl lg:text-5xl  text-center px-2 font-bold">
 Our Story and Mission
 </div>
 
 {/* Description */}
-<div className= "text-center py-5 md:py-7 2xl:py-10 px-7 sm:px-28 2xl:px-64 text-lg lg:text-xl">
+<div className= "text-min-blue text-center py-5 md:py-7 2xl:py-10 px-7 sm:px-28 2xl:px-64 text-lg lg:text-xl">
  Welcome to the Green Portfolio Project (GPP), a student-led nonprofit
  organization committed to empowering the next generation of youth with
  the skills they need to succeed in the business world. Our mission is
@@ -189,13 +189,13 @@ Our Story and Mission
       <Image className="w-20 xs:w-24 sm:w-28 md:w-32 lg:w-44 absolute sm:bottom-20 bottom-24 lg:bottom-10 left-3 sm:left-7 xl:left-24 2xl:left-52       
       scale-x-[-1] scale-y-[-1] rotate-90" src={backgroundLeaf} alt="background leaf"/>
 
-        <div className="text-3xl xs:text-4xl md:text-5xl font-bold text-center w-48 xs:w-auto sm:w-auto flex z-10">
+        <div className="text-gradient text-3xl xs:text-4xl md:text-5xl font-bold text-center w-48 xs:w-auto sm:w-auto flex z-10">
           Sign up for free today 
           
         </div>
 
         
-        <p className=" text-center md:text-lg w-64 xs:w-96 md:w-auto pt-5 pb-10 z-10">
+        <p className="text-min-blue text-center md:text-lg w-64 xs:w-96 md:w-auto pt-5 pb-10 z-10">
           Empowering students with free courses and a vibrant community <br className="hidden md:block" /> to thrive in business. Join us and build your future today!
         </p>
         <div className="flex justify-center gap-4">
