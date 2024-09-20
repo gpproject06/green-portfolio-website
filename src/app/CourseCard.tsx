@@ -19,7 +19,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ imageUrl, title, active }) => {
                 layout="responsive"
                 className=''
             />
-            <h1 className='p-1 m-1 text-xs lg:text-lg text-gradient'>{title}</h1>
+            <h1 className='p-1 m-1 text-sm md:text-xs lg:text-lg text-gradient'>{title}</h1>
         </div>
     );
 }
