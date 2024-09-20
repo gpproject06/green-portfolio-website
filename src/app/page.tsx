@@ -20,7 +20,7 @@ import courses from "/public/courses.svg"
 import sprout from "/public/sprout.svg"
 
 import CourseCard from './CourseCard';
-import backgroundLeaf from '/public/backgroundLeaf.png';
+import testLeaf from '/public/testLeaf.svg'
 
 export default function Home() {
   return (
@@ -55,24 +55,34 @@ export default function Home() {
         </a>
       </div>
 
-      {/* Discover Our Courses Section */}
-      <div className="flex flex-col items-center justify-center flex-wrap text-center my-20">
-        <h1 className="text-gradient mb-4 mx-3 font-inter font-bold text-3xl sm:text-4xl lg:text-5xl">Discover Our Courses</h1>
-        <div className='relative flex justify-end top-28 w-full md:top-10'>
-          <Image src={backgroundLeaf} alt="background leaf" width={65} height={500} className='absolute sm:w-[90px] md:w-[100px] xl:w-[120px] xl:right-5' />
+      { /* Discover Our Courses Section */ }
+      <div className="flex flex-col items-center justify-center text-center mb-20 ">
+  <h1 className="mb-4 mx-3 font-inter font-bold text-2xl sm:text-4xl lg:text-5xl">Discover Our Courses</h1>
+  <div className='relative flex justify-end top-16 w-full md:top-10'>
+  <Image
+            src={testLeaf}
+            alt="tested leaf"
+            className='absolute w-[80px] sm:w-[90px] md:w-[100px] xl:w-[120px] xl:right-5 '
+        />
+        
+ </div>
+  <p className="font-dmsans leading-5 text-sky-950 text-sm px-4 mb-20 w-full sm:text-lg sm:w-11/12 md:mb-16 md:w-11/12 lg:text-xl xl:w-10/12 2xl:w-8/12">
+    We offer a variety of courses, including our flagship course on creating your own social media marketing agency.
+    Additionally, we provide specialized workshops on personal finance, business skills, and college admissions.
+  </p>
+<div className='w-8/12 sm:w-7/12 md:flex md:w-10/12 xl:w-8/12 2xl:w-7/12'>
+  <CourseCard imageUrl="/socialMediaCourse.png" title="Social Media Marketing For High Schoolers" active = {true} />
+  <CourseCard imageUrl="/PitchDesk.png" title="Pitch Deck Building For Investors" active = {true} />  
+  <CourseCard imageUrl='/stockMarket.png' title='Introduction to the Stock Market Coming Soon' active= {false}/>
+</div>
+    <div className='relative w-full bottom-10'>
+    <Image
+            src={testLeaf}
+            alt="background leaf"
+            className='absolute rotate-[-85deg] sm:w-[100px] xl:w-[120px] xl:left-10'
+        />
         </div>
-        <p className="font-dmsans leading-5 text-min-blue  mb-10 w-full sm:text-lg sm:w-11/12 md:mb-16 md:w-11/12 lg:text-xl xl:w-10/12 2xl:w-8/12 px-6 xl:py-4 xl:text-2xl">
-          We offer a variety of courses, including our flagship course on creating your own social media marketing agency. Additionally, we provide specialized workshops on personal finance, business skills, and college admissions.
-        </p>
-        <div className='w-8/12 sm:w-7/12 md:flex md:w-10/12 xl:w-8/12 2xl:w-7/12 flex flex-wrap justify-center'>
-          <CourseCard imageUrl="/socialMediaCourse.png" title="Social Media Marketing For High Schoolers" active={true} />
-          <CourseCard imageUrl="/PitchDesk.png" title="Pitch Deck Building For Investors" active={true} />
-          <CourseCard imageUrl='/stockMarket.png' title='Introduction to the Stock Market Coming Soon' active={false} />
-        </div>
-        <div className='relative w-full bottom-10'>
-          <Image src={backgroundLeaf} alt="background leaf" width={70} height={500} className='absolute rotate-[-85deg] sm:w-[100px] xl:w-[120px] xl:left-10' />
-        </div>
-      </div>
+  </div>
 
       {/* Mission and Story Section */}
            {/*      {/* Mission and Story Section */}
@@ -185,9 +195,9 @@ Our Story and Mission
       {/* Sign up Section */}
       <section className="pt-32 pb-11 md:py-24 lg:py-32  bg-custom-gradient-white flex flex-col items-center relative">
 
-      <Image className="w-14 xs:w-20 sm:w-24 md:w-24 lg:w-36 absolute top-30 md:top-5     right-2 sm:right-6  md:right-12 xl:right-32 2xl:right-52 z-0" src={backgroundLeaf} alt="background leaf"/>
+      <Image className="w-14 xs:w-20 sm:w-24 md:w-24 lg:w-36 absolute top-30 md:top-5     right-2 sm:right-6  md:right-12 xl:right-32 2xl:right-52 z-0" src={testLeaf} alt="background leaf"/>
       <Image className="w-20 xs:w-24 sm:w-28 md:w-32 lg:w-44 absolute sm:bottom-20 bottom-24 lg:bottom-10 left-3 sm:left-7 xl:left-24 2xl:left-52       
-      scale-x-[-1] scale-y-[-1] rotate-90" src={backgroundLeaf} alt="background leaf"/>
+      scale-x-[-1] scale-y-[-1] rotate-90" src={testLeaf} alt="background leaf"/>
 
         <div className="text-gradient text-3xl xs:text-4xl md:text-5xl font-bold text-center w-48 xs:w-auto sm:w-auto flex z-10">
           Sign up for free today 
