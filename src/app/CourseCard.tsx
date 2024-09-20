@@ -8,7 +8,7 @@ interface CourseCardProps {
 
 const CourseCard: React.FC<CourseCardProps> = ({ imageUrl, title, active }) => {
     return (
-        <div className={` font-bold text-center shadow-2xl w-60 mb-10 md:mx-6 text-sm lg:text-base xl:text-xl rounded-md 
+        <div className={` font-bold text-center shadow-2xl w-60 mb-10 md:mx-6 rounded-md 
             ${!active ? 'opacity-50' : ''} 
             transition-transform transform hover:scale-105`}>
             <Image 
@@ -19,7 +19,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ imageUrl, title, active }) => {
                 layout="responsive"
                 className=''
             />
-            <h1 className='p-3 text-lg text-gradient'>{title}</h1>
+            <h1 className='p-1 m-1 text-xs lg:text-lg text-gradient'>{title}</h1>
         </div>
     );
 }

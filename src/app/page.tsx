@@ -20,7 +20,7 @@ import courses from "/public/courses.svg"
 import sprout from "/public/sprout.svg"
 
 import CourseCard from './CourseCard';
-import testLeaf from '/public/testLeaf.svg'
+import backgroundLeaf from '/public/testLeaf.svg'
 
 export default function Home() {
   return (
@@ -28,7 +28,7 @@ export default function Home() {
       <div className='pt-10 pb-4 bg-custom-gradient-diagonal sm:bg-custom-gradient-diagonal-bottom'>
         <div className='xl:flex xl:justify-center'>
           <div className="flex flex-col justify-around sm:flex-row sm:items-center items-center max-w-screen-2xl">
-            <div className='w-10/12 xl:w-1/2'>
+            <div className='w-10/12 xl:w-1/2 md:pl-10'>
               <div className="text-gradient text-3xl sm:text-4xl lg:text-6xl xl:text-7xl mb-2 font-bold px-6">
                 Empowering the Next Generation of Business Leaders
               </div>
@@ -48,49 +48,48 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <a href="" className='flex justify-center animate-float'>
-          <svg xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="white" className="w-12 h-12">
+        <a href="" className='flex justify-center animate-float '>
+          <svg xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="white" className="w-12 h-12 xl:w-8 xl:h-8">
             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
           </svg>
         </a>
       </div>
 
       { /* Discover Our Courses Section */ }
-      <div className="flex flex-col items-center justify-center text-center mb-20 ">
-  <h1 className="mb-4 mx-3 font-inter font-bold text-2xl sm:text-4xl lg:text-5xl">Discover Our Courses</h1>
+      <div className="flex flex-col items-center justify-center text-center mb-20 mt-10">
+  <h1 className="mb-4 mx-3 font-inter font-bold text-2xl sm:text-4xl lg:text-5xl text-gradient">Discover Our Courses</h1>
   <div className='relative flex justify-end top-16 w-full md:top-10'>
   <Image
-            src={testLeaf}
+            src={backgroundLeaf}
             alt="tested leaf"
             className='absolute w-[80px] sm:w-[90px] md:w-[100px] xl:w-[120px] xl:right-5 '
         />
         
  </div>
-  <p className="font-dmsans leading-5 text-sky-950 text-sm px-4 mb-20 w-full sm:text-lg sm:w-11/12 md:mb-16 md:w-11/12 lg:text-xl xl:w-10/12 2xl:w-8/12">
+  <p className="font-dmsans leading-5 text-min-blue text-sm px-4 mb-20 w-full sm:text-lg sm:w-11/12 md:mb-16 md:w-11/12 lg:text-xl xl:w-10/12 2xl:w-8/12">
     We offer a variety of courses, including our flagship course on creating your own social media marketing agency.
     Additionally, we provide specialized workshops on personal finance, business skills, and college admissions.
   </p>
-<div className='w-8/12 sm:w-7/12 md:flex md:w-10/12 xl:w-8/12 2xl:w-7/12'>
+<div className='mx-auto md:flex md:justify-center md:w-10/12 xl:w-8/12 2xl:w-7/12'>
   <CourseCard imageUrl="/socialMediaCourse.png" title="Social Media Marketing For High Schoolers" active = {true} />
   <CourseCard imageUrl="/PitchDesk.png" title="Pitch Deck Building For Investors" active = {true} />  
   <CourseCard imageUrl='/stockMarket.png' title='Introduction to the Stock Market Coming Soon' active= {false}/>
 </div>
     <div className='relative w-full bottom-10'>
     <Image
-            src={testLeaf}
+            src={backgroundLeaf}
             alt="background leaf"
-            className='absolute rotate-[-85deg] sm:w-[100px] xl:w-[120px] xl:left-10'
+            className='absolute rotate-[-85deg] w-[80px] sm:w-[100px] xl:w-[120px] xl:left-10'
         />
         </div>
   </div>
 
-      {/* Mission and Story Section */}
-           {/*      {/* Mission and Story Section */}
-           <div>
+  {/* Mission and Story Section & BACKGROUND PT 1 */}
+   <div className=''>
 
 {/* Title */}
-<div className="text-gradient text-3xl sm:text-4xl lg:text-5xl  text-center px-2 font-bold">
-Our Story and Mission
+<div className="text-gradient text-3xl sm:text-4xl lg:text-5xl p-2 text-center px-2 font-bold">
+Our Story and Missions
 </div>
 
 {/* Description */}
@@ -101,7 +100,7 @@ Our Story and Mission
  to provide accessible and comprehensive education in business development,
  social media marketing, personal finance, and more.
 </div>
-
+{/* BACKGROUND PT 2 */}
 <div className='bg-custom-gradient-vertical'>
 
 {/* Embedded Video Background & aligning */}
@@ -130,7 +129,7 @@ Our Story and Mission
 
     <MissionCard 
       title="Practical Learning" 
-      description="Our applied knowledge templates and real-world projects ensure you can put your learning into practice." 
+      description="Apply Your learning with real-world projects and templates. " 
       linkHref="#" 
       img = {Book}
       />
@@ -195,11 +194,11 @@ Our Story and Mission
       {/* Sign up Section */}
       <section className="pt-32 pb-11 md:py-24 lg:py-32  bg-custom-gradient-white flex flex-col items-center relative">
 
-      <Image className="w-14 xs:w-20 sm:w-24 md:w-24 lg:w-36 absolute top-30 md:top-5     right-2 sm:right-6  md:right-12 xl:right-32 2xl:right-52 z-0" src={testLeaf} alt="background leaf"/>
+      <Image className="w-14 xs:w-20 sm:w-24 md:w-24 lg:w-36 absolute top-30 md:top-5     right-2 sm:right-6  md:right-12 xl:right-32 2xl:right-52 z-0" src={backgroundLeaf} alt="background leaf"/>
       <Image className="w-20 xs:w-24 sm:w-28 md:w-32 lg:w-44 absolute sm:bottom-20 bottom-24 lg:bottom-10 left-3 sm:left-7 xl:left-24 2xl:left-52       
-      scale-x-[-1] scale-y-[-1] rotate-90" src={testLeaf} alt="background leaf"/>
+      scale-x-[-1] scale-y-[-1] rotate-90" src={backgroundLeaf} alt="background leaf"/>
 
-        <div className="text-gradient text-3xl xs:text-4xl md:text-5xl font-bold text-center w-48 xs:w-auto sm:w-auto flex z-10">
+        <div className="text-gradient text-3xl xs:text-4xl md:text-5xl font-bold text-center w-48 xs:w-auto sm:w-auto flex z-10 p-2">
           Sign up for free today 
           
         </div>
