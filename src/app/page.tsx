@@ -148,16 +148,16 @@ Our Story and Missions
 <section className="flex flex-col items-center">
     <p className="text-xs font-medium border border-gray-300 rounded-xl px-5 py-1 mt-7 ">Everything you need</p>
     
-    <p className = "text-3xl sm:text-4xl lg:text-5xl text-center font-bold py-5">Education, Community, <br></br>and Mentorship</p>
+    <p className = "text-3xl sm:text-4xl lg:text-5xl text-center font-bold py-5 text-gradient">Education, Community, <br></br>and Mentorship</p>
        
-         <div className="w-auto px-5 sm:px-0  sm:w-8/12 text-center text-2xl pb-20">
+         <div className="w-auto px-5 sm:px-0  sm:w-8/12 text-center text-xl pb-20">
            Empower your journey with comprehensive learning, a <br className="hidden lg:block" /> supportive network, and personalized guidance to <br className="hidden lg:block" /> achieve your goals.
          </div>
 
 {/* ECM cards Background & aligning*/}
 <div className="flex justify-center">
-   <div className="grid grid-cols-1 sm:grid-cols-2 w-11/12 xs:w-9/12 xl:w-8/12 2xl:w-7/12
-   lg:w-10/12 gap-6 lg:gap-10 xl:gap-14 2xl:gap-28 lg:py-10 pb-9">
+   <div className="grid grid-cols-1 sm:grid-cols-2 w-11/12 xs:w-9/12 xl:w-8/12 2xl:w-5/12
+   lg:w-10/12 gap-6 lg:gap-10 xl:gap-14 2xl:gap-20 lg:py-0 pb-9">
 
    {/* ECM CardComponents */}
      <EcmCard 
