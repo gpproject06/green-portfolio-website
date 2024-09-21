@@ -26,7 +26,7 @@ import NavBar from './NavBar'
 export default function Home() {
   return (
     <>
-      <div className='pt-10 pb-4 bg-custom-gradient-diagonal sm:bg-custom-gradient-diagonal-bottom'>
+      <div className='pt-16 pb-4 bg-custom-gradient-diagonal sm:bg-custom-gradient-diagonal-bottom'>
         <NavBar />
         <div className='xl:flex xl:justify-center'>
           <div className="flex flex-col justify-around sm:flex-row sm:items-center items-center max-w-screen-2xl">
