@@ -21,11 +21,13 @@ import sprout from "/public/sprout.svg"
 
 import CourseCard from './CourseCard';
 import backgroundLeaf from '/public/testLeaf.svg'
+import NavBar from './NavBar'
 
 export default function Home() {
   return (
     <>
       <div className='pt-10 pb-4 bg-custom-gradient-diagonal sm:bg-custom-gradient-diagonal-bottom'>
+        <NavBar />
         <div className='xl:flex xl:justify-center'>
           <div className="flex flex-col justify-around sm:flex-row sm:items-center items-center max-w-screen-2xl">
             <div className='w-10/12 xl:w-1/2 md:pl-10 xl:pl-0'>
