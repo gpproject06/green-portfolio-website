@@ -1,16 +1,17 @@
-## Getting Started
+# Green Portfolio
 
-First, run the development server:
-To do this open up the terminal using  ``Ctrl + Shft + ` ``
-Top left Vscode Menu selct Terminal and then New Terminal
+## Project Overview
 
-Make sure you are in 'green-portfolio-website'
-if not use cd in order to go into the proper folder 
+**Green Portfolio** is a full-stack application developed for a social media marketing platform that educates high school students on marketing and business fundamentals. The platform serves students and provides an engaging experience through effective UI/UX design and seamless data handling. The project emphasized performance optimization and improving user interaction metrics.
 
-Run the following command:
+## Tech Stack
 
-`npm run dev`
-
-Click http://localhost:3000 while holding Ctrl at the same time 
-
-
+- **Frontend:**
+  - Next.js
+  - TypeScript
+  - Tailwind CSS
+- **Backend:**
+  - Next.js (API routes)
+  - PostgreSQL
+- **Database:**
+  - PostgreSQL
