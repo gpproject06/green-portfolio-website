@@ -44,7 +44,7 @@ export default function Home() {
               </div>
             </div>
             <div className='py-10 sm:py-8 px-6 flex justify-center'>
-              <Image className='w-80 sm:w-full' src={moneyTree} alt="Green Portfolio Tree Logo" />
+              <Image className=' w-80 sm:w-full max-w-md' src={moneyTree} alt="Green Portfolio Tree Logo" />
             </div>
           </div>
         </div>
