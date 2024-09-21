@@ -28,12 +28,12 @@ export default function Home() {
       <div className='pt-10 pb-4 bg-custom-gradient-diagonal sm:bg-custom-gradient-diagonal-bottom'>
         <div className='xl:flex xl:justify-center'>
           <div className="flex flex-col justify-around sm:flex-row sm:items-center items-center max-w-screen-2xl">
-            <div className='w-10/12 xl:w-1/2 md:pl-10'>
+            <div className='w-10/12 xl:w-1/2 md:pl-10 xl:pl-0'>
               <div className="text-gradient text-3xl sm:text-4xl lg:text-6xl xl:text-7xl mb-2 font-bold px-6">
                 Empowering the Next Generation of Business Leaders
               </div>
-              <div className='pl-6 xl:py-4 xl:text-2xl text-min-blue'>
-                At the Green Portfolio Project, we are <br /> dedicated to equipping high school <br /> and college students with essential <br /> business development skills.
+              <div className='pl-6 xl:py-4 xl:text-2xl text-min-blue w-11/12 md:w-10/12 lg:w-7/12 xl:w-10/12'>
+                At the Green Portfolio Project, we are  dedicated to equipping high school  and college students with essential  business development skills.
               </div>
               <div className="text-sm mt-5 flex items-center space-x-4 flex-none px-6">
                 <button className="bg-black text-white px-5 py-2 rounded-lg whitespace-nowrap">Get Started</button>
@@ -62,7 +62,7 @@ export default function Home() {
   <Image
             src={backgroundLeaf}
             alt="tested leaf"
-            className='absolute w-[80px] sm:w-[90px] md:w-[100px] xl:w-[120px] xl:right-5 '
+            className='absolute w-[80px] sm:w-[89px]  xl:w-[120px] xl:right-5 '
         />
         
  </div>
@@ -189,14 +189,20 @@ Our Story and Missions
 
 
 
-
-
       {/* Sign up Section */}
-      <section className="pt-32 pb-11 md:py-24 lg:py-32  bg-custom-gradient-white flex flex-col items-center relative">
+      <section className="pt-24 pb-11 md:py-24 lg:py-32  bg-custom-gradient-white flex flex-col items-center relative">
 
-      <Image className="w-14 xs:w-20 sm:w-24 md:w-24 lg:w-36 absolute top-30 md:top-5     right-2 sm:right-6  md:right-12 xl:right-32 2xl:right-52 z-0" src={backgroundLeaf} alt="background leaf"/>
-      <Image className="w-20 xs:w-24 sm:w-28 md:w-32 lg:w-44 absolute sm:bottom-20 bottom-24 lg:bottom-10 left-3 sm:left-7 xl:left-24 2xl:left-52       
-      scale-x-[-1] scale-y-[-1] rotate-90" src={backgroundLeaf} alt="background leaf"/>
+      <Image
+            src={backgroundLeaf}
+            alt="tested leaf"
+            className='absolute w-[55px] xs:w-[55px] sm:w-[95px] md:w-[105px] lg:w-[115px] xl:w-[130px] top-12 right-0 xs:top-8 lg:right-14 xl:right-20 2xl:right-52'
+        />
+
+      <Image
+            src={backgroundLeaf}
+            alt="background leaf"
+            className='absolute rotate-[-85deg] w-[60px] xs:w-[75px] sm:w-[100px] md:w-[120px] lg:w-[140px] xl:w-[160px] left-0 top-56 sm:top-48 lg:left-14 xl:left-24 2xl:left-52'
+       />
 
         <div className="text-gradient text-3xl xs:text-4xl md:text-5xl font-bold text-center w-48 xs:w-auto sm:w-auto flex z-10 p-2">
           Sign up for free today 
@@ -204,11 +210,11 @@ Our Story and Missions
         </div>
 
         
-        <p className="text-min-blue text-center md:text-lg w-64 xs:w-96 md:w-auto pt-5 pb-10 z-10">
-          Empowering students with free courses and a vibrant community <br className="hidden md:block" /> to thrive in business. Join us and build your future today!
+        <p className="text-min-blue text-center text-base md:text-lg xs:w-96 md:w-1/2 2xl:w-4/12 pt-2 pb-10 px-2 z-10">
+        Empowering students with free courses and a vibrant community to thrive in business. Join us and build your future today!
         </p>
-        <div className="flex justify-center gap-4">
-          <button className="bg-black text-white text-base py-2 px-5 rounded-xl">Sign Up</button>
+        <div className="flex justify-center gap-4 ">
+          <button className="bg-black text-white text-base py-1 px-3 rounded-lg">Sign Up</button>
           <button className="text-lg font-medium flex items-center gap-1">
             Learn more
             <Image className="w-4 pt-1" src={rightArrow} alt="Right Arrow button" />
@@ -239,8 +245,8 @@ Our Story and Missions
           </div>
         </div>
 
-        <div className="pl-1 text-start sm:ml-auto">
-          <ul className="flex flex-col sm:flex-row gap-5 lg:gap-20 2xl:gap-36 2xl:text-lg">
+        <div className="px-3 lg:px-8 2xl:px-0 text-start sm:ml-auto">
+          <ul className="flex flex-col sm:flex-row gap-5 lg:gap-28 2xl:gap-36 2xl:text-lg">
             <li>
               Product
               <ul className="text-gray-500 pt-4 space-y-4">
