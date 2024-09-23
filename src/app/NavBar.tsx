@@ -86,7 +86,7 @@ export default function NavBar() {
         </ul>
         <div className="md:flex md:items-center">
           <Link href="/#contact-section">
-            <button className="px-3 py-2 bg-blue-500 text-white rounded-md md:text-sm md:ml-4 xl:text-lg">Let's Connect</button>
+            <button className="px-4 py-2 bg-black text-white rounded-md md:text-sm md:ml-4 xl:text-lg">Let's Connect</button>
           </Link>
         </div>
       </div>
