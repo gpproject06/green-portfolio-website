@@ -13,9 +13,10 @@ export default function NavBar() {
 
   const navbarList: NavbarItem[] = [
     { name: 'Home' },
-    { name: 'About' },
-    { name: 'Services' },
-    { name: 'Contact' },
+    { name: 'Courses' },
+    { name: 'Our Story' },
+    { name: 'Resources'},
+    { name: 'Sign Up' },
   ];
 
   const toggleNav = () => {
@@ -23,7 +24,7 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="bg-lighter-green md:bg-transparent fixed group md:absolute top-0 left-0 w-full z-50 md:flex">
+    <nav className="bg-lighter-green md:bg-transparent fixed group md:absolute top-0 left-0 w-full z-50 md:flex md:px-5" >
       {/* Mobile Menu - sliding effect */}
       <div className={`absolute w-full transition-all duration-1000 ease-in-out ${isOpen ? 'nav-open' : 'nav-closed'}`}>
         <ul className="flex flex-col items-center text-lg mt-20">
@@ -36,9 +37,10 @@ export default function NavBar() {
       </div>
 
       {/* Logo section */}
-      <div className="text-3xl flex justify-center items-end md:justify-start py-2 md:px-5 md:w-60 h-full">
-        <div className="text-2xl md:text-3xl flex items-center">
-          <Image src={logo} alt="Logo" className="w-10 z-50" />
+      <div className="text-3xl flex justify-center items-end md:justify-start py-2 md:w-60 h-full">
+        <div className="text-2xl md:text-3xl flex items-center md:w-full">
+          <Image src={logo} alt="Logo" className="w-12 md:w-10 z-50" />
+          <h1 className='text-lg pl-3 hidden md:block md:text-sm lg:text-lg font-bold xl:text-xl'>Green Portfolio</h1>
         </div>
       </div>
 
@@ -74,17 +76,17 @@ export default function NavBar() {
       </div>
 
       {/* Desktop Menu */}
-      <div className={`hidden md:flex md:justify-between md:w-full ${isOpen ? 'flex' : ''}`}>
-        <ul className="flex items-center text-lg">
+      <div className={`hidden md:flex md:justify-end md:w-full ${isOpen ? 'flex' : ''}`}>
+        <ul className="flex items-center text-lg md:text-sm lg:text-lg xl:text-xl">
           {navbarList.map((item) => (
             <li key={item.name}>
-              <span className='px-4'>{item.name}</span>
+              <span className='px-2 lg:px-4'>{item.name}</span>
             </li>
           ))}
         </ul>
-        <div className="px-4 md:flex md:items-center">
+        <div className="md:flex md:items-center">
           <Link href="/#contact-section">
-            <button className="px-4 py-2 bg-blue-500 text-white rounded-md">Let's Connect</button>
+            <button className="px-3 py-2 bg-blue-500 text-white rounded-md md:text-sm md:ml-4 xl:text-lg">Let's Connect</button>
           </Link>
         </div>
       </div>
