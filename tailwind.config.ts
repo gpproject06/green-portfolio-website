@@ -16,7 +16,8 @@ const config: Config = {
       },
       colors: {
         'light-green': '#74C69D',
-        'min-blue': '#010D3E'
+        'min-blue': '#010D3E',
+        'lighter-green': '#3EBC00',
       },
       animation: {
         float: 'float 2.5s ease-in-out infinite',
@@ -36,6 +37,10 @@ const config: Config = {
       screens: {
         xs: '450px',
         xxs: '360px',
+      },
+      rotate: {
+        'top-burger':'50deg',
+        'bottom-burger': '-45deg',
       },
     },
   },

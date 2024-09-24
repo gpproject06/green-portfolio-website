@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nav-open {
+    max-height:100dvh;
+    overflow: hidden;
+    transition: max-height 0.7s ease-in-out;
+    height:100dvh;
+    background-color: #3EBC00;
+  }
+  
+  .nav-closed {
+    max-height: 0px; /* Use a large enough value to cover the expanded menu */
+    overflow:hidden;
+    transition: max-height 0.7s ease-in-out;
+    height:100dvh;
+    background-color: #3EBC00;
+  }
+  
