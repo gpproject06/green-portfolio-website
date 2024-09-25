@@ -22,10 +22,39 @@ import sprout from "/public/sprout.svg"
 import CourseCard from './CourseCard';
 import backgroundLeaf from '/public/testLeaf.svg'
 import NavBar from './NavBar'
+import { GetServerSideProps } from 'next';
+import pool from './lib/db';  // Adjust the import path as needed
 
-export default function Home() {
+type Employee = {
+  id: number;
+  name: string;
+  position: string;
+};
+
+export default async function Home() {
+
+  let employees: Employee[] = [];
+  
+  // Fetch data directly in the async component
+  try {
+    const result = await pool.query<Employee>('SELECT * FROM employees');
+    employees = result.rows;
+  } catch (error) {
+    console.error('Error fetching employees:', error);
+  }
+
   return (
     <>
+    <div className='m-20'>
+    <h1>Employee List</h1>
+      <ul>
+        {employees.map((employee) => (
+          <li key={employee.id}>
+            {employee.name} - {employee.position}
+          </li>
+        ))}
+      </ul>
+      </div>
       <div className='pt-16 pb-4 bg-custom-gradient-diagonal sm:bg-custom-gradient-diagonal-bottom'>
         <NavBar />
         <div className='xl:flex xl:justify-center'>
