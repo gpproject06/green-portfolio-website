@@ -23,9 +23,13 @@ import CourseCard from './CourseCard';
 import backgroundLeaf from '/public/testLeaf.svg'
 import NavBar from './NavBar'
 
+import GoogleAnalytics from './GoogleAnalytics';
+
 export default function Home() {
   return (
     <>
+          <GoogleAnalytics />
+          
       <div className='pt-16 pb-4 bg-custom-gradient-diagonal sm:bg-custom-gradient-diagonal-bottom'>
         <NavBar />
         <div className='xl:flex xl:justify-center'>
