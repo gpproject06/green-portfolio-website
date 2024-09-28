@@ -1,3 +1,5 @@
+'use client';
+import { useState,useEffect } from 'react';
 import Image from 'next/image';
 import moneyTree from '/public/moneyTree.png';
 import MissionCard from "./MissionCard"; 
@@ -24,12 +26,21 @@ import backgroundLeaf from '/public/testLeaf.svg'
 import NavBar from './NavBar'
 
 import GoogleAnalytics from './GoogleAnalytics';
+import Modal from './Modal';
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }}, [isModalOpen]);
+  
   return (
     <>
           <GoogleAnalytics />
-          
+              
       <div className='pt-16 pb-4 bg-custom-gradient-diagonal sm:bg-custom-gradient-diagonal-bottom'>
         <NavBar />
         <div className='xl:flex xl:justify-center'>
@@ -195,38 +206,47 @@ Our Story and Missions
 
 
 
-      {/* Sign up Section */}
-      <section className="pt-24 pb-11 md:py-24 lg:py-32  bg-custom-gradient-white flex flex-col items-center relative">
-
-      <Image
-            src={backgroundLeaf}
-            alt="tested leaf"
-            className='absolute w-[55px] xs:w-[55px] sm:w-[95px] md:w-[105px] lg:w-[115px] xl:w-[130px] top-12 right-0 xs:top-8 lg:right-14 xl:right-20 2xl:right-52'
+     {/* Sign up Section */}
+     <section className="pt-24 pb-11 md:py-24 lg:py-32 bg-custom-gradient-white flex flex-col items-center relative">
+        <Image
+          src={backgroundLeaf}
+          alt="tested leaf"
+          className="absolute w-[55px] xs:w-[55px] sm:w-[95px] md:w-[105px] lg:w-[115px] xl:w-[130px] top-12 right-0 xs:top-8 lg:right-14 xl:right-20 2xl:right-52"
         />
 
-      <Image
-            src={backgroundLeaf}
-            alt="background leaf"
-            className='absolute rotate-[-85deg] w-[60px] xs:w-[75px] sm:w-[100px] md:w-[120px] lg:w-[140px] xl:w-[160px] left-0 top-56 sm:top-48 lg:left-14 xl:left-24 2xl:left-52'
-       />
+        <Image
+          src={backgroundLeaf}
+          alt="background leaf"
+          className="absolute rotate-[-85deg] w-[60px] xs:w-[75px] sm:w-[100px] md:w-[120px] lg:w-[140px] xl:w-[160px] left-0 top-56 sm:top-48 lg:left-14 xl:left-24 2xl:left-52"
+        />
 
         <div className="text-gradient text-3xl xs:text-4xl md:text-5xl font-bold text-center w-48 xs:w-auto sm:w-auto flex z-10 p-2">
-          Sign up for free today 
-          
+          Sign up for free today
         </div>
 
-        
         <p className="text-min-blue text-center text-base md:text-lg xs:w-96 md:w-1/2 2xl:w-4/12 pt-2 pb-10 px-2 z-10">
-        Empowering students with free courses and a vibrant community to thrive in business. Join us and build your future today!
+          Empowering students with free courses and a vibrant community to
+          thrive in business. Join us and build your future today!
         </p>
         <div className="flex justify-center gap-4 ">
-          <button className="bg-black text-white text-base py-1 px-3 rounded-lg">Sign Up</button>
+          <button
+            className= "bg-black text-white px-5 py-2 rounded-lg whitespace-nowrap"
+            onClick={() => setIsModalOpen(true)}
+          >
+            Sign Up
+          </button>
           <button className="text-lg font-medium flex items-center gap-1">
             Learn more
-            <Image className="w-4 pt-1" src={rightArrow} alt="Right Arrow button" />
+            <Image
+              className="w-4 pt-1"
+              src={rightArrow}
+              alt="Right Arrow button"
+            />
           </button>
         </div>
       </section>
+
+      {isModalOpen && <Modal onClose={() => setIsModalOpen(false)} />}
 
       {/* Footer Section */}
       <section className="bg-black gap-10 py-10 pl-4 2xl:px-36 text-center flex flex-col sm:flex-row text-white">
