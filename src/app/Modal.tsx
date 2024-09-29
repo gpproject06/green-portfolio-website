@@ -61,30 +61,28 @@ export default function SignUpModal({ onClose }: SignUpModalProps) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
+  
     // Check if all fields are valid
     if (!validation.clientEmail || !validation.clientName || !formData.clientEmail || !formData.clientName) {
       setError('Please fill out all fields correctly and try again.');
       return;
     }
-
-    // Submission logic
+  
     const { clientName, clientEmail } = formData;
-
+  
     try {
-      const res = await fetch('/api', {
+      const res = await fetch('/api/signup', {
         method: 'POST',
         headers: {
-          'Content-type': 'application/json',
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({ clientName, clientEmail }),
       });
-
+  
       const { msg, success } = await res.json();
-
+  
       if (success) {
         setConfirmation(true);
-        // Optionally reset the form data
         setFormData({ clientName: '', clientEmail: '' });
         setValidation({ clientName: true, clientEmail: true });
       } else {
@@ -93,7 +91,7 @@ export default function SignUpModal({ onClose }: SignUpModalProps) {
     } catch (error) {
       setError('An error occurred during submission. Please try again later.');
     }
-  };
+  };  
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">

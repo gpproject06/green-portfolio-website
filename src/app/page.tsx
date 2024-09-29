@@ -25,12 +25,11 @@ import CourseCard from './CourseCard';
 import backgroundLeaf from '/public/testLeaf.svg'
 import NavBar from './NavBar'
 import { GetServerSideProps } from 'next';
-import pool from './lib/db';  // Adjust the import path as needed
-
+import pool from './lib/db';  
 import GoogleAnalytics from './GoogleAnalytics';
 import Modal from './Modal';
 
-export default async function Home() {
+export default function Home() {
   
   const [isModalOpen, setIsModalOpen] = useState(false);
   useEffect(() => {
