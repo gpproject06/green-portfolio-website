@@ -31,16 +31,6 @@ import GoogleAnalytics from './GoogleAnalytics';
 import Modal from './Modal';
 
 export default async function Home() {
-
-  let employees: Employee[] = [];
-  
-  // Fetch data directly in the async component
-  try {
-    const result = await pool.query<Employee>('SELECT * FROM employees');
-    employees = result.rows;
-  } catch (error) {
-    console.error('Error fetching employees:', error);
-  }
   
   const [isModalOpen, setIsModalOpen] = useState(false);
   useEffect(() => {
@@ -49,7 +39,7 @@ export default async function Home() {
     } else {
       document.body.style.overflow = 'auto';
     }}, [isModalOpen]);
-  
+
   return (
     <>
           <GoogleAnalytics />
