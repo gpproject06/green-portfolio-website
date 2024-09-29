@@ -27,11 +27,8 @@ import NavBar from './NavBar'
 import { GetServerSideProps } from 'next';
 import pool from './lib/db';  // Adjust the import path as needed
 
-type Employee = {
-  id: number;
-  name: string;
-  position: string;
-};
+import GoogleAnalytics from './GoogleAnalytics';
+import Modal from './Modal';
 
 export default async function Home() {
 
@@ -44,11 +41,7 @@ export default async function Home() {
   } catch (error) {
     console.error('Error fetching employees:', error);
   }
-
-import GoogleAnalytics from './GoogleAnalytics';
-import Modal from './Modal';
-
-export default function Home() {
+  
   const [isModalOpen, setIsModalOpen] = useState(false);
   useEffect(() => {
     if (isModalOpen) {
