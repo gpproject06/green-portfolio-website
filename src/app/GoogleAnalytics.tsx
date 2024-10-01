@@ -17,9 +17,9 @@ const GoogleAnalytics: React.FC = () => {
     }
     gtag('js', new Date());
     gtag('config', 'G-BJK8MLB3TH');
-  }, []); // Empty dependency array ensures this runs only once when the component mounts
+  }, []); 
 
-  return null; // No UI, just for adding the script
+  return null; 
 };
 
 export default GoogleAnalytics;
