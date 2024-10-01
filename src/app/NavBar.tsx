@@ -6,31 +6,31 @@ import logo from '/public/logo.svg';
 
 interface NavbarItem {
   name: string;
+  hrefLink: string;
 }
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const navbarList: NavbarItem[] = [
-    { name: 'Home' },
-    { name: 'Courses' },
-    { name: 'Our Story' },
-    { name: 'Resources'},
-    { name: 'Sign Up' },
+    { name: 'Courses', hrefLink: '#courses'},
+    { name: 'Our Story', hrefLink: '#our-story' },
+    { name: 'Resources', hrefLink: '#resources'},
   ];
 
   const toggleNav = () => {
     setIsOpen(!isOpen);
   };
+  
 
   return (
-    <nav className="bg-lighter-green md:bg-transparent fixed group md:absolute top-0 left-0 w-full z-50 md:flex md:px-5" >
+    <nav className="bg-black md:bg-transparent fixed group md:absolute top-0 left-0 w-full z-50 md:flex md:px-5" >
       {/* Mobile Menu - sliding effect */}
       <div className={`absolute w-full transition-all duration-1000 ease-in-out ${isOpen ? 'nav-open' : 'nav-closed'}`}>
         <ul className="flex flex-col items-center text-lg mt-20">
           {navbarList.map((item) => (
             <li className='py-3 text-2xl' key={item.name} onClick={toggleNav}>
-              <span className=' text-white'>{item.name}</span>
+                <Link href={item.hrefLink} className='text-white'>{item.name}</Link>
             </li>
           ))}
         </ul>
@@ -51,7 +51,7 @@ export default function NavBar() {
           fill="none"
           viewBox="0 -1 30 24"
           strokeWidth="2"
-          stroke="currentColor"
+          stroke="white"
           className="hamburger w-10"
         >
           <path
@@ -80,13 +80,13 @@ export default function NavBar() {
         <ul className="flex items-center text-lg md:text-sm lg:text-lg xl:text-xl">
           {navbarList.map((item) => (
             <li key={item.name}>
-              <span className='px-2 lg:px-4'>{item.name}</span>
+              <Link href={item.hrefLink} className='px-2 lg:px-4'>{item.name}</Link>
             </li>
           ))}
         </ul>
         <div className="md:flex md:items-center">
-          <Link href="/#contact-section">
-            <button className="px-4 py-2 bg-black text-white rounded-md md:text-sm md:ml-4 xl:text-lg">Contact Us</button>
+          <Link href="#sign-up">
+            <button className="bg-black text-white px-5 py-2 rounded-lg whitespace-nowrap">Sign Up</button>
           </Link>
         </div>
       </div>

@@ -7,7 +7,7 @@
     overflow: hidden;
     transition: max-height 0.7s ease-in-out;
     height:100dvh;
-    background-color: #3EBC00;
+    background-color: #000000;
   }
   
   .nav-closed {
@@ -15,6 +15,13 @@
     overflow:hidden;
     transition: max-height 0.7s ease-in-out;
     height:100dvh;
-    background-color: #3EBC00;
+    background-color: #000000;
   }
   
+.scroll-margin-top {
+  scroll-margin-top: 4rem; /* Adjust this value according to your nav bar height */
+} 
+
+.scroll-margin-top-md {
+  scroll-margin-top: 0rem; /* Adjust this value according to your nav bar height */
+}
