@@ -26,7 +26,7 @@ const config: Config = {
         'custom-gradient-diagonal': 'linear-gradient(225deg, #EAEEFE 40%, #74C69D 80%)',
         'custom-gradient-diagonal-bottom': 'linear-gradient(195deg, #EAEEFE 40%, #74C69D 80%)',
         'custom-gradient-vertical': 'linear-gradient(#FFFFFF 10%, #74C69D 120%)',
-        'custom-gradient-white': 'linear-gradient(#EAEEFE 40%, #95D5B2 100%)',
+        'custom-gradient-white': 'linear-gradient(#FFFFFF 40%, #95D5B2 100%)',
       },
       keyframes: {
         float: {
