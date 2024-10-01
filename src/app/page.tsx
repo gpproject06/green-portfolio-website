@@ -22,17 +22,20 @@ import sprout from "/public/sprout.svg"
 import CourseCard from './CourseCard';
 import backgroundLeaf from '/public/testLeaf.svg'
 import NavBar from './NavBar'
+import Link from 'next/link';
+
 
 import GoogleAnalytics from './GoogleAnalytics';
 
 export default function Home() {
   return (
     <>
+
           <GoogleAnalytics />
           
-      <div className='pt-16 pb-4 bg-custom-gradient-diagonal sm:bg-custom-gradient-diagonal-bottom'>
+      <div className='pt-20 mc:pt-12 pb-4 bg-custom-gradient-diagonal sm:bg-custom-gradient-diagonal-bottom'>
         <NavBar />
-        <div className='xl:flex xl:justify-center'>
+        <div className=' pt-10 xl:flex xl:justify-center'>
           <div className="flex flex-col justify-around sm:flex-row sm:items-center items-center max-w-screen-2xl">
             <div className='w-10/12 xl:w-1/2 md:pl-10 xl:pl-0'>
               <div className="text-gradient text-3xl sm:text-4xl lg:text-6xl xl:text-7xl mb-2 font-bold px-6">
@@ -42,11 +45,11 @@ export default function Home() {
                 At the Green Portfolio Project, we are  dedicated to equipping high school  and college students with essential  business development skills.
               </div>
               <div className="text-sm mt-5 flex items-center space-x-4 flex-none px-6">
-                <button className="bg-black text-white px-5 py-2 rounded-lg whitespace-nowrap">Get Started</button>
-                <div className="flex items-center">
-                  <button className="mr-2">Learn More</button>
+                <Link href = "#courses" className=" bg-black text-white px-5 py-2 rounded-lg whitespace-nowrap">Get Started</Link>
+                <Link href = "#our-story"className="flex items-center">
+                  <span  className="mr-2">Learn More</span>
                   <Image className="w-5" src={rightArrow} alt="Right Arrow SVG" />
-                </div>
+                </Link>
               </div>
             </div>
             <div className='py-10 sm:py-8 px-6 flex justify-center'>
@@ -54,7 +57,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <a href="" className='flex justify-center animate-float '>
+        <a href="#courses" className='flex justify-center animate-float '>
           <svg xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="white" className="w-12 h-12 xl:w-8 xl:h-8">
             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
           </svg>
@@ -62,13 +65,13 @@ export default function Home() {
       </div>
 
       { /* Discover Our Courses Section */ }
-      <div className="flex flex-col items-center justify-center text-center mb-20 mt-10">
+      <div id='courses' className="flex flex-col items-center justify-center text-center pb-10 pt-10 scroll-mt-16 md:scroll-mt-0">
   <h1 className="mb-4 mx-3 font-inter font-bold text-2xl sm:text-4xl lg:text-5xl text-gradient">Discover Our Courses</h1>
   <div className='relative flex justify-end top-16 w-full md:top-10'>
   <Image
             src={backgroundLeaf}
             alt="tested leaf"
-            className='absolute w-[80px] sm:w-[89px]  xl:w-[120px] xl:right-5 '
+            className='absolute w-[80px] sm:w-[89px]  xl:w-[120px] xl:right-5  '
         />
         
  </div>
@@ -77,21 +80,34 @@ export default function Home() {
     Additionally, we provide specialized workshops on personal finance, business skills, and college admissions.
   </p>
 <div className='mx-auto md:flex md:justify-center md:w-10/12 xl:w-8/12 2xl:w-7/12'>
-  <CourseCard imageUrl="/socialMediaCourse.png" title="Social Media Marketing For High Schoolers" active = {true} />
-  <CourseCard imageUrl="/PitchDesk.png" title="Pitch Deck Building For Investors" active = {true} />  
-  <CourseCard imageUrl='/stockMarket.png' title='Introduction to the Stock Market Coming Soon' active= {false}/>
+  <CourseCard 
+  imageUrl="/socialMediaCourse.png" 
+  title="Social Media Marketing For High Schoolers" 
+  active = {true}  
+  courseUrl='https://greenportfolio-project.notion.site/Module-1-Dashboard-Introduction-to-Digital-Marketing-7833ae99b72d4968aa11357de5b7958d?pvs=4'
+  />
+  <CourseCard 
+  imageUrl="/PitchDesk.png" 
+  title="Pitch Deck Building For Investors" 
+  active = {true}
+  courseUrl='https://greenportfolio-project.notion.site/Module-2-Dashboard-Services-offered-by-a-Social-Media-Marketing-Agency-795f6b5848094e05ad53c9c64ebe932a?pvs=4' />  
+  <CourseCard imageUrl='/stockMarket.png' 
+  title='Introduction to the Stock Market Coming Soon' 
+  active= {false}
+  courseUrl=''
+  />
 </div>
-    <div className='relative w-full bottom-10'>
+    <div className='relative w-full bottom-10 '>
     <Image
             src={backgroundLeaf}
             alt="background leaf"
-            className='absolute rotate-[-85deg] w-[80px] sm:w-[100px] xl:w-[120px] xl:left-10'
+            className=' absolute rotate-[-85deg] w-[80px] sm:w-[100px] xl:w-[120px] xl:left-10 '
         />
         </div>
   </div>
 
   {/* Mission and Story Section & BACKGROUND PT 1 */}
-   <div className=''>
+   <div id='our-story' className='scroll-mt-16 md:scroll-mt-0 pb-10 pt-16'>
 
 {/* Title */}
 <div className="text-gradient text-3xl sm:text-4xl lg:text-5xl p-2 text-center px-2 font-bold">
@@ -122,28 +138,28 @@ Our Story and Missions
      <MissionCard 
       title="Free and Accessible" 
       description="All courses, resources, and community access are free." 
-      linkHref="#" 
+      linkHref="#resources" 
       img={Leaf}
       />
 
     <MissionCard 
       title="Student-Led and Focused"   
       description="Set and track goals with manageable task breakdowns." 
-      linkHref="#" 
+      linkHref="#resources" 
       img= {Target}
       />
 
     <MissionCard 
       title="Practical Learning" 
       description="Apply Your learning with real-world projects and templates. " 
-      linkHref="#" 
+      linkHref="#resources" 
       img = {Book}
       />
 
     <MissionCard 
       title="Supportive Environment" 
       description="Our community is here to support you every step of the way." 
-      linkHref="#" 
+      linkHref="#resources" 
       img= {Support}
       />
     
@@ -151,7 +167,7 @@ Our Story and Missions
 </div>
 </div>
 
-<section className="flex flex-col items-center">
+<section id='resources' className="flex flex-col items-center  pb-10 scroll-mt-16 md:scroll-mt-0">
     <p className="text-xs font-medium border border-gray-300 rounded-xl px-5 py-1 mt-7 ">Everything you need</p>
     
     <p className = "text-3xl sm:text-4xl lg:text-5xl text-center font-bold py-5 text-gradient">Education, Community, <br></br>and Mentorship</p>
@@ -196,18 +212,21 @@ Our Story and Missions
 
 
       {/* Sign up Section */}
-      <section className="pt-24 pb-11 md:py-24 lg:py-32  bg-custom-gradient-white flex flex-col items-center relative">
+      <section className="pt-10 pb-14 md:py-24 lg:py-32  bg-custom-gradient-white flex flex-col items-center relative " id='sign-up'>
+      
 
       <Image
             src={backgroundLeaf}
             alt="tested leaf"
-            className='absolute w-[55px] xs:w-[55px] sm:w-[95px] md:w-[105px] lg:w-[115px] xl:w-[130px] top-12 right-0 xs:top-8 lg:right-14 xl:right-20 2xl:right-52'
-        />
+            className='absolute w-[55px] xs:w-[55px] sm:w-[95px] md:w-[105px] lg:w-[115px] xl:w-[130px] top-12 right-0 xs:top-8 lg:right-14 xl:right-20 2xl:right-52 '
+            />
+     
 
       <Image
             src={backgroundLeaf}
             alt="background leaf"
-            className='absolute rotate-[-85deg] w-[60px] xs:w-[75px] sm:w-[100px] md:w-[120px] lg:w-[140px] xl:w-[160px] left-0 top-56 sm:top-48 lg:left-14 xl:left-24 2xl:left-52'
+            className='absolute rotate-[-85deg] w-[60px] xs:w-[75px] sm:w-[100px] md:w-[120px] lg:w-[140px] xl:w-[160px] left-0 top-56 sm:top-48 lg:left-14 xl:left-24 2xl:left-52 
+'
        />
 
         <div className="text-gradient text-3xl xs:text-4xl md:text-5xl font-bold text-center w-48 xs:w-auto sm:w-auto flex z-10 p-2">
@@ -220,7 +239,7 @@ Our Story and Missions
         Empowering students with free courses and a vibrant community to thrive in business. Join us and build your future today!
         </p>
         <div className="flex justify-center gap-4 ">
-          <button className="bg-black text-white text-base py-1 px-3 rounded-lg">Sign Up</button>
+          <button className="bg-black text-white px-5 py-2 rounded-lg whitespace-nowrap ">Sign Up</button>
           <button className="text-lg font-medium flex items-center gap-1">
             Learn more
             <Image className="w-4 pt-1" src={rightArrow} alt="Right Arrow button" />
