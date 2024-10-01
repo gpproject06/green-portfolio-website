@@ -25,9 +25,14 @@ import NavBar from './NavBar'
 import Link from 'next/link';
 
 
+import GoogleAnalytics from './GoogleAnalytics';
+
 export default function Home() {
   return (
     <>
+
+          <GoogleAnalytics />
+          
       <div className='pt-20 mc:pt-12 pb-4 bg-custom-gradient-diagonal sm:bg-custom-gradient-diagonal-bottom'>
         <NavBar />
         <div className=' pt-10 xl:flex xl:justify-center'>
