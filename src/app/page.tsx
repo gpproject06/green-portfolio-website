@@ -327,14 +327,7 @@ Our Story and Missions
                 <li><a href="#" target="_blank" rel="noopener noreferrer">Docs</a></li>
               </ul>
             </li>
-            <li>
-              Legal
-              <ul className="text-gray-500 pt-4 space-y-4">
-                <li><a href="#" target="_blank" rel="noopener noreferrer">Privacy</a></li>
-                <li><a href="#" target="_blank" rel="noopener noreferrer">Terms</a></li>
-                <li><a href="#" target="_blank" rel="noopener noreferrer">Security</a></li>
-              </ul>
-            </li>
+            
           </ul>
         </div>
       </section>
