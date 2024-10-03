@@ -28,8 +28,9 @@ import NavBar from './NavBar'
 import { GetServerSideProps } from 'next';
 import pool from './lib/db';  
 import Link from 'next/link';
-import GoogleAnalytics from './GoogleAnalytics';
 import Modal from './Modal';
+
+import { GoogleTagManager } from '@next/third-parties/google'
 
 export default function Home() {
   
@@ -43,8 +44,9 @@ export default function Home() {
 
   return (
     <>
+      <GoogleTagManager gtmId="G-BJK8MLB3TH" />
 
-          <GoogleAnalytics />     
+
       <div className='pt-20 mc:pt-12 pb-4 bg-custom-gradient-diagonal sm:bg-custom-gradient-diagonal-bottom'>
 
         <NavBar />
