@@ -30,7 +30,7 @@ import pool from './lib/db';
 import Link from 'next/link';
 import Modal from './Modal';
 
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleAnalytics  } from '@next/third-parties/google'
 
 export default function Home() {
   
@@ -44,8 +44,7 @@ export default function Home() {
 
   return (
     <>
-      <GoogleTagManager gtmId="G-BJK8MLB3TH" />
-
+      <GoogleAnalytics  gaId="G-BJK8MLB3TH" />
 
       <div className='pt-20 mc:pt-12 pb-4 bg-custom-gradient-diagonal sm:bg-custom-gradient-diagonal-bottom'>
 
