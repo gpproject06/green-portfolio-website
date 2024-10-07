@@ -1,11 +1,12 @@
+//import config
 import { NextApiRequest, NextApiResponse } from 'next';
-import pool from '../../src/app/lib/db';  // Adjust the path to your database configuration
+import pool from '../../src/app/lib/db';  
 import mailgun from 'mailgun-js';
 
-// Initialize Mailgun
+
 const mg = mailgun({
-  apiKey: process.env.MAILGUN_API_KEY as string, // Your Mailgun API Key
-  domain: process.env.MAILGUN_DOMAIN as string,  // Your Mailgun Domain
+  apiKey: process.env.MAILGUN_API_KEY as string, 
+  domain: process.env.MAILGUN_DOMAIN as string, 
 });
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
