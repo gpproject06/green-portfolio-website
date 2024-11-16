@@ -27,7 +27,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       // Send an email via Mailgun
       const emailData = {
         from: 'Green Portfolio Project <no-reply@sandboxee45f6330e484abf9b773da9ce08cbbb.mailgun.org>',
-        to: clientEmail, // Send the email to the client
+        to: 'gpproject060@gmail.com', // Send the email to the client
         subject: 'New Client Signup!',
         text: `Great News!,\n\n${clientName} is interested in the Green Portfolio Project! You can contact them at ${clientEmail}.`,
       };
