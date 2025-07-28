@@ -1,6 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { motion } from "motion/react";
+
 import moneyTree from "/public/moneyTree.png";
 import MissionCard from "./MissionCard";
 import EcmCard from "./EcmCard";
@@ -48,43 +50,67 @@ export default function Home() {
 
       <div className="pt-20 mc:pt-12 pb-4 bg-custom-gradient-diagonal sm:bg-custom-gradient-diagonal-bottom">
         <NavBar />
-        <div className=" pt-10 xl:flex xl:justify-center">
-          <div className="flex flex-col justify-around sm:flex-row sm:items-center items-center max-w-screen-2xl">
-            <div className="w-10/12 xl:w-1/2 md:pl-10 xl:pl-0">
-              <div className="text-gradient text-3xl sm:text-4xl lg:text-6xl xl:text-7xl mb-2 font-bold px-6">
-                Empowering the Next Generation of Business Leaders
+        <motion.div
+          className=" "
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            delay: 0,
+            ease: "linear",
+            duration: 3,
+            type: "spring",
+          }}
+        >
+          <div className=" pt-10 xl:flex xl:justify-center">
+            <div className="flex flex-col justify-around sm:flex-row sm:items-center items-center max-w-screen-2xl">
+              <div className="w-10/12 xl:w-1/2 md:pl-10 xl:pl-0">
+                <div className="text-gradient text-3xl sm:text-4xl lg:text-6xl xl:text-7xl mb-2 font-bold px-6">
+                  Empowering the Next Generation of Business Leaders
+                </div>
+                <div className="pl-6 xl:py-4 xl:text-2xl text-min-blue w-11/12 md:w-10/12 lg:w-7/12 xl:w-10/12">
+                  At the Green Portfolio Project, we are dedicated to equipping
+                  high school and college students with essential business
+                  development skills.
+                </div>
+                <div className="text-sm mt-5 flex items-center space-x-4 flex-none px-6">
+                  <Link
+                    href="#courses"
+                    className=" bg-black text-white px-5 py-2 rounded-lg whitespace-nowrap"
+                  >
+                    Get Started
+                  </Link>
+                  <Link href="#our-story" className="flex items-center">
+                    <span className="mr-2">Learn More</span>
+                    <Image
+                      className="w-5"
+                      src={rightArrow}
+                      alt="Right Arrow SVG"
+                    />
+                  </Link>
+                </div>
               </div>
-              <div className="pl-6 xl:py-4 xl:text-2xl text-min-blue w-11/12 md:w-10/12 lg:w-7/12 xl:w-10/12">
-                At the Green Portfolio Project, we are dedicated to equipping
-                high school and college students with essential business
-                development skills.
-              </div>
-              <div className="text-sm mt-5 flex items-center space-x-4 flex-none px-6">
-                <Link
-                  href="#courses"
-                  className=" bg-black text-white px-5 py-2 rounded-lg whitespace-nowrap"
-                >
-                  Get Started
-                </Link>
-                <Link href="#our-story" className="flex items-center">
-                  <span className="mr-2">Learn More</span>
+              <motion.div
+                className=" "
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  delay: 0.25,
+                  ease: "linear",
+                  duration: 3,
+                  type: "spring",
+                }}
+              >
+                <div className="py-10 sm:py-8 px-6 flex justify-center">
                   <Image
-                    className="w-5"
-                    src={rightArrow}
-                    alt="Right Arrow SVG"
+                    className=" w-80 sm:w-full max-w-md"
+                    src={moneyTree}
+                    alt="Green Portfolio Tree Logo"
                   />
-                </Link>
-              </div>
-            </div>
-            <div className="py-10 sm:py-8 px-6 flex justify-center">
-              <Image
-                className=" w-80 sm:w-full max-w-md"
-                src={moneyTree}
-                alt="Green Portfolio Tree Logo"
-              />
+                </div>
+              </motion.div>
             </div>
           </div>
-        </div>
+        </motion.div>
         <a href="#courses" className="flex justify-center animate-float ">
           <svg
             xmlns="http:www.w3.org/2000/svg"
@@ -111,13 +137,24 @@ export default function Home() {
         <h1 className="mb-4 mx-3 font-inter font-bold text-2xl sm:text-4xl lg:text-5xl text-gradient">
           Discover Our Courses
         </h1>
-        <div className="relative flex justify-end top-16 w-full md:top-10">
+        <motion.div
+          className="relative flex justify-end top-16 w-full md:top-10"
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{
+            delay: 0.5,
+            ease: "linear",
+            duration: 3,
+            type: "spring",
+          }}
+          viewport={{ once: true }}
+        >
           <Image
             src={backgroundLeaf}
             alt="tested leaf"
             className="absolute w-[80px] sm:w-[89px]  xl:w-[120px] xl:right-5  "
           />
-        </div>
+        </motion.div>
         <p className="font-dmsans leading-5 text-min-blue text-sm px-4 mb-20 w-full sm:text-lg sm:w-11/12 md:mb-16 md:w-11/12 lg:text-xl xl:w-10/12 2xl:w-8/12">
           We offer a variety of courses, including our flagship course on
           creating your own social media marketing agency. Additionally, we
@@ -145,11 +182,24 @@ export default function Home() {
           />
         </div>
         <div className="relative w-full bottom-10 ">
-          <Image
-            src={backgroundLeaf}
-            alt="background leaf"
-            className=" absolute rotate-[-85deg] w-[80px] sm:w-[100px] xl:w-[120px] xl:left-10 "
-          />
+          <motion.div
+            className=""
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{
+              delay: 0.5,
+              ease: "linear",
+              duration: 3,
+              type: "spring",
+            }}
+            viewport={{ once: true }}
+          >
+            <Image
+              src={backgroundLeaf}
+              alt="background leaf"
+              className=" absolute rotate-[-85deg] w-[80px] sm:w-[100px] xl:w-[120px] xl:left-10 "
+            />
+          </motion.div>
         </div>
       </div>
 
@@ -171,10 +221,21 @@ export default function Home() {
         {/* BACKGROUND PT 2 */}
         <div className="bg-custom-gradient-vertical">
           {/* Embedded Video Background & aligning */}
-          <div className="flex justify-center items-center">
-            {/* Embeded Video component */}
-            <YouTubeEmbed videoId="c6uWZELuLPU" />
-          </div>
+          <motion.div
+            className=" "
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{
+              delay: 0.1,
+              duration: 2.5,
+            }}
+            viewport={{ once: true }}
+          >
+            <div className="flex justify-center items-center">
+              {/* Embeded Video component */}
+              <YouTubeEmbed videoId="c6uWZELuLPU" />
+            </div>
+          </motion.div>
 
           <section className="pt-24 pb-20 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-14 sm:gap-10 sm:px-5 md:px-0 justify-items-center">
             <MissionCard
@@ -262,49 +323,82 @@ export default function Home() {
       </section>
 
       {/* Sign up Section */}
-      <section
-        className="pt-10 pb-14 md:py-24 lg:py-32  bg-custom-gradient-white flex flex-col items-center relative "
-        id="sign-up"
+      <motion.div
+        className=" "
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{
+          delay: 0.1,
+          ease: "linear",
+          duration: 2.5,
+          type: "spring",
+        }}
+        viewport={{ once: true }}
       >
-        <Image
-          src={backgroundLeaf}
-          alt="tested leaf"
-          className="absolute w-[55px] xs:w-[55px] sm:w-[95px] md:w-[105px] lg:w-[115px] xl:w-[130px] top-12 right-0 xs:top-8 lg:right-14 xl:right-20 2xl:right-52 "
-        />
-
-        <Image
-          src={backgroundLeaf}
-          alt="background leaf"
-          className="absolute rotate-[-85deg] w-[60px] xs:w-[75px] sm:w-[100px] md:w-[120px] lg:w-[140px] xl:w-[160px] left-0 top-56 sm:top-48 lg:left-14 xl:left-24 2xl:left-52 
-"
-        />
-
-        <div className="text-gradient text-3xl xs:text-4xl md:text-5xl font-bold text-center w-48 xs:w-auto sm:w-auto flex z-10 p-2">
-          Sign up for free today
-        </div>
-
-        <p className="text-min-blue text-center text-base md:text-lg xs:w-96 md:w-1/2 2xl:w-4/12 pt-2 pb-10 px-2 z-10">
-          Empowering students with free courses and a vibrant community to
-          thrive in business. Join us and build your future today!
-        </p>
-        <div className="flex justify-center gap-4 ">
-          <button
-            className="bg-black text-white px-5 py-2 rounded-lg whitespace-nowrap"
-            onClick={() => setIsModalOpen(true)}
+        <section
+          className="pt-10 pb-14 md:py-24 lg:py-32  bg-custom-gradient-white flex flex-col items-center relative "
+          id="sign-up"
+        >
+          <motion.div
+            className="absolute w-[55px] xs:w-[55px] sm:w-[95px] md:w-[105px] lg:w-[115px] xl:w-[130px] top-12 right-0 xs:top-8 lg:right-14 xl:right-20 2xl:right-52 "
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{
+              delay: 0.5,
+              ease: "linear",
+              duration: 3,
+              type: "spring",
+            }}
+            viewport={{ once: true }}
           >
-            Sign Up
-          </button>
-
-          <button className="text-lg font-medium flex items-center gap-1">
-            Learn more
+            <Image src={backgroundLeaf} alt="tested leaf" className="" />
+          </motion.div>
+          <motion.div
+            className="absolute  w-[60px] xs:w-[75px] sm:w-[100px] md:w-[120px] lg:w-[140px] xl:w-[160px] left-0 top-56 sm:top-48 lg:left-14 xl:left-24 2xl:left-52  "
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{
+              delay: 0.5,
+              ease: "linear",
+              duration: 3,
+              type: "spring",
+            }}
+            viewport={{ once: true }}
+          >
             <Image
-              className="w-4 pt-1"
-              src={rightArrow}
-              alt="Right Arrow button"
+              src={backgroundLeaf}
+              alt="background leaf"
+              className="rotate-[-85deg]"
             />
-          </button>
-        </div>
-      </section>
+          </motion.div>
+
+          <div className="text-gradient text-3xl xs:text-4xl md:text-5xl font-bold text-center w-48 xs:w-auto sm:w-auto flex z-10 p-2">
+            Sign up for free today
+          </div>
+
+          <p className="text-min-blue text-center text-base md:text-lg xs:w-96 md:w-1/2 2xl:w-4/12 pt-2 pb-10 px-2 z-10">
+            Empowering students with free courses and a vibrant community to
+            thrive in business. Join us and build your future today!
+          </p>
+          <div className="flex justify-center gap-4 ">
+            <button
+              className="bg-black text-white px-5 py-2 rounded-lg whitespace-nowrap"
+              onClick={() => setIsModalOpen(true)}
+            >
+              Sign Up
+            </button>
+
+            <button className="text-lg font-medium flex items-center gap-1">
+              Learn more
+              <Image
+                className="w-4 pt-1"
+                src={rightArrow}
+                alt="Right Arrow button"
+              />
+            </button>
+          </div>
+        </section>
+      </motion.div>
 
       {isModalOpen && <Modal onClose={() => setIsModalOpen(false)} />}
 
